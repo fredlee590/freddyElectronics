@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]
+then
+	echo "need one argument and one argument only"
+	echo "enter a project name"
+	exit -1
+fi
+
+eagledir="/c/Users/Freddy/Documents/eagle"
+
+cp $eagledir/$1/eagle.epf ./eagle_files/dev
+cp $eagledir/$1/$1.sch ./eagle_files/dev
+cp $eagledir/$1/$1.brd ./eagle_files/dev
