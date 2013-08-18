@@ -9,6 +9,6 @@ fi
 
 eagledir="/c/Users/Freddy/Documents/eagle"
 
-cp $eagledir/$1/eagle.epf ./eagle_files/dev
-cp $eagledir/$1/$1.sch ./eagle_files/dev
-cp $eagledir/$1/$1.brd ./eagle_files/dev
+cp $eagledir/$1/eagle.epf $1/eagle_files/dev
+cp $eagledir/$1/$1.sch $1/eagle_files/dev
+cp $eagledir/$1/$1.brd $1/eagle_files/dev
