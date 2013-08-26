@@ -22,3 +22,5 @@ cp $eagledir/$1/$1\.GTO $1/eagle_files/prod
 cp $eagledir/$1/$1\.GTS $1/eagle_files/prod
 
 cp $eagledir/$1/$1\.TXT $1/eagle_files/prod
+
+cp $eagledir/$1/$1\.dri $1/eagle_files/prod
