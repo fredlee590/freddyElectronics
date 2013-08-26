@@ -8071,7 +8071,7 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <text x="-5.08" y="7.62" size="1.27" layer="25">&gt;name</text>
 </package>
 <package name="CR2032/2025">
-<smd name="GND" x="0" y="0" dx="17.8" dy="17.8" layer="1" roundness="100"/>
+<smd name="GND" x="0" y="0" dx="12.8" dy="12.8" layer="1" roundness="100"/>
 <pad name="VCC_1" x="-10.4" y="1.5" drill="1" diameter="2.3"/>
 <pad name="VCC_3" x="10.4" y="1.5" drill="1" diameter="2.3"/>
 <pad name="VCC_2" x="-10.4" y="-1.6" drill="1" diameter="2.3"/>
@@ -8210,9 +8210,9 @@ Note the THM package has the ground pads on both sides of the PCB so that the ma
 <wire x1="33.02" y1="60.96" x2="53.34" y2="60.96" width="0.1524" layer="91"/>
 <junction x="53.34" y="60.96"/>
 <pinref part="U1" gate="G$1" pin="VIN"/>
-<pinref part="P2" gate="G$1" pin="VCC_2"/>
 <wire x1="33.02" y1="91.44" x2="53.34" y2="91.44" width="0.1524" layer="91"/>
 <junction x="53.34" y="91.44"/>
+<pinref part="P2" gate="G$1" pin="VCC_2"/>
 </segment>
 </net>
 <net name="GND" class="0">
