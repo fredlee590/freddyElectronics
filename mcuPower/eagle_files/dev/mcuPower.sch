@@ -8200,8 +8200,8 @@ Note the THM package has the ground pads on both sides of the PCB so that the ma
 <nets>
 <net name="VCC" class="0">
 <segment>
-<wire x1="53.34" y1="93.98" x2="53.34" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="53.34" y1="91.44" x2="53.34" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="93.98" x2="53.34" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="86.36" x2="53.34" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="60.96" x2="73.66" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="60.96" x2="73.66" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="SUPPLY1" gate="G$1" pin="VCC"/>
@@ -8210,9 +8210,9 @@ Note the THM package has the ground pads on both sides of the PCB so that the ma
 <wire x1="33.02" y1="60.96" x2="53.34" y2="60.96" width="0.1524" layer="91"/>
 <junction x="53.34" y="60.96"/>
 <pinref part="U1" gate="G$1" pin="VIN"/>
-<wire x1="33.02" y1="91.44" x2="53.34" y2="91.44" width="0.1524" layer="91"/>
-<junction x="53.34" y="91.44"/>
-<pinref part="P2" gate="G$1" pin="VCC_2"/>
+<pinref part="P2" gate="G$1" pin="VCC_3"/>
+<wire x1="33.02" y1="86.36" x2="53.34" y2="86.36" width="0.1524" layer="91"/>
+<junction x="53.34" y="86.36"/>
 </segment>
 </net>
 <net name="GND" class="0">
