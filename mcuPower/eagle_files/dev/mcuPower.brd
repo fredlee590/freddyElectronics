@@ -129,7 +129,7 @@
 <wire x1="0.03" y1="45.05" x2="0" y2="0" width="0" layer="20"/>
 <text x="25.1" y="20.2" size="1.016" layer="22" rot="MR0">F. Lee
 mcuPower
-8/25/13</text>
+8/31/13</text>
 </plain>
 <libraries>
 <library name="resistor">
@@ -1373,10 +1373,6 @@ We've spent an enormous amount of time creating and checking these footprints an
 <pad name="VOUT" x="-1.27" y="-13.3" drill="0.8" shape="long" rot="R90"/>
 <pad name="VIN" x="-3.81" y="-13.3" drill="0.8" shape="long" rot="R90"/>
 <pad name="VADJ" x="3.81" y="-13.3" drill="0.8" shape="long" rot="R90"/>
-<wire x1="-3.81" y1="-13.32" x2="-3.81" y2="-8.3" width="1.4" layer="21"/>
-<wire x1="-1.27" y1="-13.3" x2="-1.27" y2="-8.3" width="1.4" layer="21"/>
-<wire x1="1.27" y1="-13.3" x2="1.27" y2="-8.3" width="1.4" layer="21"/>
-<wire x1="3.81" y1="-13.3" x2="3.81" y2="-8.3" width="1.4" layer="21"/>
 <text x="-5.08" y="7.62" size="1.27" layer="25">&gt;name</text>
 </package>
 <package name="CR2032/2025">

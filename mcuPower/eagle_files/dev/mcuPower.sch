@@ -8064,10 +8064,6 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <pad name="VOUT" x="-1.27" y="-13.3" drill="0.8" shape="long" rot="R90"/>
 <pad name="VIN" x="-3.81" y="-13.3" drill="0.8" shape="long" rot="R90"/>
 <pad name="VADJ" x="3.81" y="-13.3" drill="0.8" shape="long" rot="R90"/>
-<wire x1="-3.81" y1="-13.32" x2="-3.81" y2="-8.3" width="1.4" layer="21"/>
-<wire x1="-1.27" y1="-13.3" x2="-1.27" y2="-8.3" width="1.4" layer="21"/>
-<wire x1="1.27" y1="-13.3" x2="1.27" y2="-8.3" width="1.4" layer="21"/>
-<wire x1="3.81" y1="-13.3" x2="3.81" y2="-8.3" width="1.4" layer="21"/>
 <text x="-5.08" y="7.62" size="1.27" layer="25">&gt;name</text>
 </package>
 <package name="CR2032/2025">
