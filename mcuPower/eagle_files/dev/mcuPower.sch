@@ -8060,10 +8060,10 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <wire x1="5.1" y1="7.5" x2="-5.1" y2="7.5" width="0.127" layer="21"/>
 <hole x="0" y="3.8" drill="3.2"/>
 <wire x1="-5.1" y1="0" x2="5.1" y2="0" width="0.127" layer="21"/>
-<pad name="GND" x="1.27" y="-13.3" drill="0.8" shape="long" rot="R90"/>
-<pad name="VOUT" x="-1.27" y="-13.3" drill="0.8" shape="long" rot="R90"/>
-<pad name="VIN" x="-3.81" y="-13.3" drill="0.8" shape="long" rot="R90"/>
-<pad name="VADJ" x="3.81" y="-13.3" drill="0.8" shape="long" rot="R90"/>
+<pad name="GND" x="1.27" y="-13.3" drill="1" shape="long" rot="R90"/>
+<pad name="VOUT" x="-1.27" y="-13.3" drill="1" shape="long" rot="R90"/>
+<pad name="VIN" x="-3.81" y="-13.3" drill="1" shape="long" rot="R90"/>
+<pad name="VADJ" x="3.81" y="-13.3" drill="1" shape="long" rot="R90"/>
 <text x="-5.08" y="7.62" size="1.27" layer="25">&gt;name</text>
 </package>
 <package name="CR2032/2025">
@@ -8182,7 +8182,7 @@ Note the THM package has the ground pads on both sides of the PCB so that the ma
 <instance part="R1" gate="G$1" x="86.36" y="43.18"/>
 <instance part="C1" gate="G$1" x="33.02" y="53.34"/>
 <instance part="C2" gate="G$1" x="55.88" y="50.8"/>
-<instance part="R2" gate="1" x="76.2" y="50.8" rot="R180"/>
+<instance part="R2" gate="1" x="76.2" y="50.8"/>
 <instance part="SUPPLY1" gate="G$1" x="53.34" y="96.52"/>
 <instance part="SUPPLY2" gate="GND" x="-10.16" y="27.94"/>
 <instance part="SUPPLY3" gate="GND" x="81.28" y="60.96"/>
@@ -8250,12 +8250,10 @@ Note the THM package has the ground pads on both sides of the PCB so that the ma
 <wire x1="86.36" y1="48.26" x2="86.36" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="58.42" x2="83.82" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="83.82" y1="58.42" x2="83.82" y2="63.5" width="0.1524" layer="91"/>
-<junction x="81.28" y="43.18"/>
-<wire x1="81.28" y1="43.18" x2="68.58" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="43.18" x2="68.58" y2="50.8" width="0.1524" layer="91"/>
-<pinref part="R2" gate="1" pin="S"/>
-<wire x1="68.58" y1="50.8" x2="71.12" y2="50.8" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="VADJ"/>
+<pinref part="R2" gate="1" pin="S"/>
+<wire x1="81.28" y1="48.26" x2="81.28" y2="50.8" width="0.1524" layer="91"/>
+<junction x="81.28" y="48.26"/>
 </segment>
 </net>
 <net name="VOUT" class="0">
@@ -8265,10 +8263,10 @@ Note the THM package has the ground pads on both sides of the PCB so that the ma
 <wire x1="76.2" y1="58.42" x2="55.88" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="58.42" x2="55.88" y2="53.34" width="0.1524" layer="91"/>
 <label x="68.58" y="58.42" size="1.778" layer="95"/>
-<junction x="76.2" y="58.42"/>
-<pinref part="R2" gate="1" pin="A"/>
-<wire x1="76.2" y1="58.42" x2="76.2" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="VOUT"/>
+<pinref part="R2" gate="1" pin="E"/>
+<wire x1="76.2" y1="55.88" x2="76.2" y2="58.42" width="0.1524" layer="91"/>
+<junction x="76.2" y="58.42"/>
 </segment>
 <segment>
 <pinref part="JP1" gate="G$1" pin="2"/>
