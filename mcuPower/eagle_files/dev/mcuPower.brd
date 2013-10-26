@@ -1625,7 +1625,6 @@ design rules under a new name.</description>
 <attribute name="NAME" x="21.29" y="39.84" size="1.27" layer="26" rot="MR180"/>
 </element>
 <element name="JP2" library="adafruit" package="1X01" value="" x="2" y="7.2" smashed="yes">
-<attribute name="NAME" x="3.8538" y="7.1288" size="1.27" layer="25" ratio="10"/>
 <attribute name="VALUE" x="0.73" y="4.025" size="1.27" layer="27"/>
 </element>
 </elements>
