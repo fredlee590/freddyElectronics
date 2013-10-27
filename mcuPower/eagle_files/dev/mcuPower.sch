@@ -8252,7 +8252,7 @@ With round pins</description>
 <instance part="SUPPLY3" gate="GND" x="81.28" y="60.96"/>
 <instance part="JP1" gate="G$1" x="114.3" y="50.8" rot="R180"/>
 <instance part="U1" gate="G$1" x="78.74" y="76.2"/>
-<instance part="P1" gate="G$1" x="15.24" y="83.82"/>
+<instance part="P1" gate="G$1" x="12.7" y="83.82"/>
 <instance part="P2" gate="G$1" x="27.94" y="88.9"/>
 <instance part="JP2" gate="G$1" x="116.84" y="71.12"/>
 </instances>
@@ -8281,7 +8281,7 @@ With round pins</description>
 <pinref part="SUPPLY2" gate="GND" pin="GND"/>
 <wire x1="-10.16" y1="83.82" x2="-10.16" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="-10.16" y1="40.64" x2="-10.16" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="7.62" y1="83.82" x2="-10.16" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="83.82" x2="-10.16" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="-10.16" y1="40.64" x2="33.02" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="2"/>
 <wire x1="33.02" y1="48.26" x2="33.02" y2="40.64" width="0.1524" layer="91"/>
@@ -8348,8 +8348,10 @@ With round pins</description>
 </net>
 <net name="N$1" class="0">
 <segment>
-<pinref part="P1" gate="G$1" pin="VCC_1"/>
+<pinref part="P1" gate="G$1" pin="VCC_3"/>
 <pinref part="P2" gate="G$1" pin="GND"/>
+<wire x1="17.78" y1="81.28" x2="20.32" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="81.28" x2="20.32" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
