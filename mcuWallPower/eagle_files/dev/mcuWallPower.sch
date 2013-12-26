@@ -120,6 +120,21 @@
 <wire x1="10.6" y1="4.6" x2="10.6" y2="-4.6" width="0.127" layer="21"/>
 <wire x1="-10.6" y1="4.6" x2="-10.6" y2="-4.6" width="0.127" layer="21"/>
 </package>
+<package name="USB-MICROB-SMT">
+<smd name="1" x="-2.17" y="-0.95" dx="2.15" dy="1.9" layer="1"/>
+<smd name="2" x="2.17" y="-0.95" dx="2.15" dy="1.9" layer="1"/>
+<smd name="4" x="2.5" y="2.05" dx="1.2" dy="1.3" layer="1"/>
+<smd name="3" x="-2.5" y="2.05" dx="1.2" dy="1.3" layer="1"/>
+<smd name="7" x="0" y="1.63" dx="0.4" dy="1.35" layer="1"/>
+<smd name="6" x="-0.65" y="1.63" dx="0.4" dy="1.35" layer="1"/>
+<smd name="8" x="0.65" y="1.63" dx="0.4" dy="1.35" layer="1"/>
+<smd name="5" x="-1.3" y="1.63" dx="0.4" dy="1.35" layer="1"/>
+<smd name="9" x="1.3" y="1.63" dx="0.4" dy="1.35" layer="1"/>
+<wire x1="-3.25" y1="-2.5" x2="3.25" y2="-2.5" width="0.127" layer="21"/>
+<wire x1="3.25" y1="-2.5" x2="3.25" y2="-2.49" width="0.127" layer="21"/>
+<text x="-2.81" y="4.15" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.38" y="-4.77" size="1.27" layer="27">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="CR2032/2025">
@@ -134,6 +149,22 @@
 <pin name="VCC_3" x="5.08" y="-2.54" visible="off" length="middle" rot="R180"/>
 <pin name="VCC_4" x="5.08" y="-5.08" visible="off" length="middle" rot="R180"/>
 <text x="-10.16" y="5.08" size="1.778" layer="95">&gt;name</text>
+</symbol>
+<symbol name="USB-MICROB-SMT">
+<wire x1="-5.08" y1="7.62" x2="5.08" y2="7.62" width="0.254" layer="94"/>
+<wire x1="5.08" y1="7.62" x2="5.08" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-7.62" x2="-5.08" y2="-7.62" width="0.254" layer="94"/>
+<pin name="VCC" x="10.16" y="5.08" length="middle" rot="R180"/>
+<pin name="DATA-" x="10.16" y="2.54" length="middle" rot="R180"/>
+<pin name="DATA+" x="10.16" y="0" length="middle" rot="R180"/>
+<pin name="ID" x="10.16" y="-2.54" length="middle" rot="R180"/>
+<pin name="GND" x="10.16" y="-5.08" length="middle" rot="R180"/>
+<text x="-12.7" y="5.08" size="1.27" layer="95">&gt;NAME</text>
+<text x="-12.7" y="-7.62" size="1.27" layer="96">&gt;VALUE</text>
+<pin name="PAD1" x="-2.54" y="12.7" length="middle" direction="nc" rot="R270"/>
+<pin name="PAD3" x="2.54" y="12.7" length="middle" direction="nc" rot="R270"/>
+<pin name="PAD2" x="-2.54" y="-12.7" length="middle" direction="nc" rot="R90"/>
+<pin name="PAD4" x="2.54" y="-12.7" length="middle" direction="nc" rot="R90"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -154,6 +185,30 @@ Note the THM package has the ground pads on both sides of the PCB so that the ma
 <connect gate="G$1" pin="VCC_2" pad="VCC_2"/>
 <connect gate="G$1" pin="VCC_3" pad="VCC_3"/>
 <connect gate="G$1" pin="VCC_4" pad="VCC_4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="USB-MICROB-SMT">
+<description>USB micro B receptacle. 5 pin surface mount variant.</description>
+<gates>
+<gate name="G$1" symbol="USB-MICROB-SMT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="5-PIN" package="USB-MICROB-SMT">
+<connects>
+<connect gate="G$1" pin="DATA+" pad="7"/>
+<connect gate="G$1" pin="DATA-" pad="6"/>
+<connect gate="G$1" pin="GND" pad="9"/>
+<connect gate="G$1" pin="ID" pad="8"/>
+<connect gate="G$1" pin="PAD1" pad="1"/>
+<connect gate="G$1" pin="PAD2" pad="2"/>
+<connect gate="G$1" pin="PAD3" pad="3"/>
+<connect gate="G$1" pin="PAD4" pad="4"/>
+<connect gate="G$1" pin="VCC" pad="5"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -872,29 +927,6 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <wire x1="-1.5" y1="2.5" x2="-1.5" y2="3.25" width="0.127" layer="21"/>
 <wire x1="-1.5" y1="2.5" x2="4" y2="2.5" width="0.127" layer="21"/>
 </package>
-<package name="USB-MINIB">
-<description>&lt;b&gt;USB Series Mini-B Surface Mounted&lt;/b&gt;</description>
-<wire x1="-1.3" y1="3.8" x2="0.8" y2="3.8" width="0.2032" layer="21"/>
-<wire x1="3.3" y1="3.1" x2="3.3" y2="2.2" width="0.2032" layer="21"/>
-<wire x1="3.3" y1="-2.2" x2="3.3" y2="-3.1" width="0.2032" layer="21"/>
-<wire x1="0.8" y1="-3.8" x2="-1.3" y2="-3.8" width="0.2032" layer="21"/>
-<wire x1="-5.9" y1="3.8" x2="-5.9" y2="-3.8" width="0.2032" layer="51"/>
-<wire x1="-5.9" y1="-3.8" x2="-4.5" y2="-3.8" width="0.2032" layer="51"/>
-<wire x1="-5.9" y1="3.8" x2="-4.5" y2="3.8" width="0.2032" layer="51"/>
-<smd name="D+" x="2.5" y="0" dx="2.5" dy="0.5" layer="1"/>
-<smd name="D-" x="2.5" y="0.8" dx="2.5" dy="0.5" layer="1"/>
-<smd name="GND" x="2.5" y="-1.6" dx="2.5" dy="0.5" layer="1"/>
-<smd name="ID" x="2.5" y="-0.8" dx="2.5" dy="0.5" layer="1"/>
-<smd name="MTN3" x="-3" y="-4.5" dx="2.5" dy="2" layer="1"/>
-<smd name="MTN1" x="-3" y="4.5" dx="2.5" dy="2" layer="1"/>
-<smd name="MTN4" x="2.5" y="-4.5" dx="2.5" dy="2" layer="1"/>
-<smd name="MTN2" x="2.5" y="4.5" dx="2.5" dy="2" layer="1"/>
-<smd name="VBUS" x="2.5" y="1.6" dx="2.5" dy="0.5" layer="1"/>
-<text x="-3.81" y="1.27" size="0.4064" layer="25">&gt;NAME</text>
-<text x="-3.81" y="0" size="0.4064" layer="27">&gt;VALUE</text>
-<hole x="0" y="2.2" drill="0.9"/>
-<hole x="0" y="-2.2" drill="0.9"/>
-</package>
 </packages>
 <symbols>
 <symbol name="M04">
@@ -924,21 +956,6 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <text x="-2.54" y="5.842" size="1.778" layer="95">&gt;NAME</text>
 <pin name="1" x="7.62" y="0" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="2" x="7.62" y="2.54" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
-</symbol>
-<symbol name="USB-5PIN">
-<wire x1="7.62" y1="12.7" x2="0" y2="12.7" width="0.254" layer="94"/>
-<wire x1="0" y1="12.7" x2="0" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="-2.54" x2="7.62" y2="-2.54" width="0.254" layer="94"/>
-<text x="5.334" y="1.778" size="2.54" layer="94" rot="R90">USB</text>
-<pin name="D+" x="-2.54" y="5.08" visible="pad" length="short"/>
-<pin name="D-" x="-2.54" y="7.62" visible="pad" length="short"/>
-<pin name="VBUS" x="-2.54" y="10.16" visible="pad" length="short"/>
-<pin name="GND" x="-2.54" y="0" visible="pad" length="short"/>
-<pin name="ID" x="-2.54" y="2.54" visible="pad" length="short"/>
-<pin name="MTN1" x="2.54" y="15.24" visible="pad" length="short" rot="R270"/>
-<pin name="MTN2" x="5.08" y="15.24" visible="pad" length="short" rot="R270"/>
-<pin name="MTN3" x="2.54" y="-5.08" visible="pad" length="short" rot="R90"/>
-<pin name="MTN4" x="5.08" y="-5.08" visible="pad" length="short" rot="R90"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -1326,34 +1343,6 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 </device>
 </devices>
 </deviceset>
-<deviceset name="USB-MINIB">
-<description>&lt;b&gt;Mini-USB "B" connector with 5th pin broken out.&lt;/b&gt;&lt;p&gt;
-Created new symbol breaking out 5th "ID" pin in mini/micro USB connector spec.  See: http://en.wikipedia.org/wiki/Mini_usb#Cables.  Uses same footprint as 4-pin symbol.&lt;p&gt;
- 
-
-Also added pins to connect to mounting / shield pads if required (probably not generally needed as signals aren't shielded once they leave the connector).</description>
-<gates>
-<gate name="G$1" symbol="USB-5PIN" x="0" y="0"/>
-</gates>
-<devices>
-<device name="-5PIN" package="USB-MINIB">
-<connects>
-<connect gate="G$1" pin="D+" pad="D+"/>
-<connect gate="G$1" pin="D-" pad="D-"/>
-<connect gate="G$1" pin="GND" pad="GND"/>
-<connect gate="G$1" pin="ID" pad="ID"/>
-<connect gate="G$1" pin="MTN1" pad="MTN3"/>
-<connect gate="G$1" pin="MTN2" pad="MTN1"/>
-<connect gate="G$1" pin="MTN3" pad="MTN2"/>
-<connect gate="G$1" pin="MTN4" pad="MTN4"/>
-<connect gate="G$1" pin="VBUS" pad="VBUS"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -1369,8 +1358,8 @@ Also added pins to connect to mounting / shield pads if required (probably not g
 <part name="P1" library="freddyLibr" deviceset="CR2032" device=""/>
 <part name="JP1" library="SparkFun-Connectors" deviceset="M04" device="PTH"/>
 <part name="JP3" library="SparkFun-Connectors" deviceset="M02" device="PTH"/>
-<part name="U1" library="SparkFun-Connectors" deviceset="USB-MINIB" device="-5PIN"/>
 <part name="JP2" library="SparkFun-Connectors" deviceset="M04" device="PTH"/>
+<part name="U1" library="freddyLibr" deviceset="USB-MICROB-SMT" device="5-PIN"/>
 </parts>
 <sheets>
 <sheet>
@@ -1380,8 +1369,8 @@ Also added pins to connect to mounting / shield pads if required (probably not g
 <instance part="P1" gate="G$1" x="20.32" y="81.28" rot="R270"/>
 <instance part="JP1" gate="G$1" x="45.72" y="78.74" rot="R180"/>
 <instance part="JP3" gate="G$1" x="48.26" y="60.96" rot="R180"/>
-<instance part="U1" gate="G$1" x="25.4" y="45.72" rot="R180"/>
-<instance part="JP2" gate="G$1" x="45.72" y="43.18" rot="R180"/>
+<instance part="JP2" gate="G$1" x="7.62" y="48.26"/>
+<instance part="U1" gate="G$1" x="25.4" y="27.94" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -1409,18 +1398,21 @@ Also added pins to connect to mounting / shield pads if required (probably not g
 </net>
 <net name="N$3" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="GND"/>
+<wire x1="30.48" y1="38.1" x2="30.48" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="JP2" gate="G$1" pin="1"/>
-<wire x1="27.94" y1="45.72" x2="40.64" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="45.72" x2="12.7" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="GND"/>
 </segment>
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="VBUS"/>
-<wire x1="27.94" y1="35.56" x2="35.56" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="35.56" x2="35.56" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="38.1" x2="-2.54" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="38.1" x2="-2.54" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="60.96" x2="15.24" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="VCC"/>
 <pinref part="JP2" gate="G$1" pin="2"/>
-<wire x1="35.56" y1="43.18" x2="40.64" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="12.7" y1="48.26" x2="15.24" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="48.26" x2="15.24" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
