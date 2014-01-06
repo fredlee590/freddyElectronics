@@ -13,18 +13,22 @@ cp $eagledir/$1/eagle.epf $1/eagle_files/dev
 cp $eagledir/$1/$1.sch $1/eagle_files/dev
 cp $eagledir/$1/$1.brd $1/eagle_files/dev
 
+# bottom layer, silkscreen, and solder mask
 cp $eagledir/$1/$1\.GBL $1/eagle_files/prod
 cp $eagledir/$1/$1\.GBO $1/eagle_files/prod
 cp $eagledir/$1/$1\.GBS $1/eagle_files/prod
 
+# top layer, silkscreen, and solder mask
 cp $eagledir/$1/$1\.GTL $1/eagle_files/prod
 cp $eagledir/$1/$1\.GTO $1/eagle_files/prod
 cp $eagledir/$1/$1\.GTS $1/eagle_files/prod
 
+# drill information and outline
 cp $eagledir/$1/$1\.GML $1/eagle_files/prod
-
 cp $eagledir/$1/$1\.TXT $1/eagle_files/prod
-
 cp $eagledir/$1/$1\.dri $1/eagle_files/prod
-
 cp $eagledir/$1/$1\.dxf $1/eagle_files/prod
+
+# specific to OSHPark
+cp $eagledir/$1/$1\.GKO $1/eagle_files/prod
+cp $eagledir/$1/$1\.XLN $1/eagle_files/prod
