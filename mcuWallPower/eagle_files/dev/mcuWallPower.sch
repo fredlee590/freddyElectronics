@@ -130,8 +130,6 @@
 <smd name="8" x="0.65" y="1.63" dx="0.4" dy="1.35" layer="1"/>
 <smd name="5" x="-1.3" y="1.63" dx="0.4" dy="1.35" layer="1"/>
 <smd name="9" x="1.3" y="1.63" dx="0.4" dy="1.35" layer="1"/>
-<wire x1="-3.25" y1="-2.5" x2="3.25" y2="-2.5" width="0.127" layer="21"/>
-<wire x1="3.25" y1="-2.5" x2="3.25" y2="-2.49" width="0.127" layer="21"/>
 <text x="-2.81" y="4.15" size="1.27" layer="25">&gt;NAME</text>
 <text x="-3.38" y="-4.77" size="1.27" layer="27">&gt;VALUE</text>
 </package>
@@ -1409,10 +1407,10 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <wire x1="20.32" y1="38.1" x2="-2.54" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="-2.54" y1="38.1" x2="-2.54" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="-2.54" y1="60.96" x2="15.24" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="VCC"/>
 <pinref part="JP2" gate="G$1" pin="2"/>
 <wire x1="12.7" y1="48.26" x2="15.24" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="48.26" x2="15.24" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="VCC"/>
 </segment>
 </net>
 </nets>
