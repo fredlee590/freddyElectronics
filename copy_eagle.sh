@@ -7,28 +7,33 @@ then
 	exit -1
 fi
 
+proj=$1
+
 eagledir="/c/Users/Freddy/Documents/eagle"
 
-cp $eagledir/$1/eagle.epf $1/eagle_files/dev
-cp $eagledir/$1/$1.sch $1/eagle_files/dev
-cp $eagledir/$1/$1.brd $1/eagle_files/dev
+mkdir -p $proj/eagle_files/dev &> /dev/null
+mkdir -p $proj/eagle_files/prod &> /dev/null
+
+cp $eagledir/$proj/eagle.epf $proj/eagle_files/dev
+cp $eagledir/$proj/$proj.sch $proj/eagle_files/dev
+cp $eagledir/$proj/$proj.brd $proj/eagle_files/dev
 
 # bottom layer, silkscreen, and solder mask
-cp $eagledir/$1/$1\.GBL $1/eagle_files/prod
-cp $eagledir/$1/$1\.GBO $1/eagle_files/prod
-cp $eagledir/$1/$1\.GBS $1/eagle_files/prod
+cp $eagledir/$proj/$proj\.GBL $proj/eagle_files/prod
+cp $eagledir/$proj/$proj\.GBO $proj/eagle_files/prod
+cp $eagledir/$proj/$proj\.GBS $proj/eagle_files/prod
 
 # top layer, silkscreen, and solder mask
-cp $eagledir/$1/$1\.GTL $1/eagle_files/prod
-cp $eagledir/$1/$1\.GTO $1/eagle_files/prod
-cp $eagledir/$1/$1\.GTS $1/eagle_files/prod
+cp $eagledir/$proj/$proj\.GTL $proj/eagle_files/prod
+cp $eagledir/$proj/$proj\.GTO $proj/eagle_files/prod
+cp $eagledir/$proj/$proj\.GTS $proj/eagle_files/prod
 
 # drill information and outline
-cp $eagledir/$1/$1\.GML $1/eagle_files/prod
-cp $eagledir/$1/$1\.TXT $1/eagle_files/prod
-cp $eagledir/$1/$1\.dri $1/eagle_files/prod
-cp $eagledir/$1/$1\.dxf $1/eagle_files/prod
+cp $eagledir/$proj/$proj\.GML $proj/eagle_files/prod
+cp $eagledir/$proj/$proj\.TXT $proj/eagle_files/prod
+cp $eagledir/$proj/$proj\.dri $proj/eagle_files/prod
+cp $eagledir/$proj/$proj\.dxf $proj/eagle_files/prod
 
 # specific to OSHPark
-cp $eagledir/$1/$1\.GKO $1/eagle_files/prod
-cp $eagledir/$1/$1\.XLN $1/eagle_files/prod
+cp $eagledir/$proj/$proj\.GKO $proj/eagle_files/prod
+cp $eagledir/$proj/$proj\.XLN $proj/eagle_files/prod
