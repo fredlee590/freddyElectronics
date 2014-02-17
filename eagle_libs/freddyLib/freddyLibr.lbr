@@ -98,10 +98,63 @@
 <smd name="8" x="0.65" y="1.63" dx="0.4" dy="1.35" layer="1"/>
 <smd name="5" x="-1.3" y="1.63" dx="0.4" dy="1.35" layer="1"/>
 <smd name="9" x="1.3" y="1.63" dx="0.4" dy="1.35" layer="1"/>
-<wire x1="-3.25" y1="-2.5" x2="3.25" y2="-2.5" width="0.127" layer="21"/>
-<wire x1="3.25" y1="-2.5" x2="3.25" y2="-2.49" width="0.127" layer="21"/>
 <text x="-2.81" y="4.15" size="1.27" layer="25">&gt;NAME</text>
 <text x="-3.38" y="-4.77" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="PCM12SMTR">
+<smd name="2" x="0.75" y="1.75" dx="0.7" dy="1.5" layer="1" rot="R180"/>
+<smd name="3" x="2.25" y="1.75" dx="0.7" dy="1.5" layer="1"/>
+<smd name="7" x="3.65" y="-1.1" dx="0.8" dy="1" layer="1" rot="R90"/>
+<smd name="6" x="3.65" y="1.1" dx="0.8" dy="1" layer="1" rot="R90"/>
+<smd name="5" x="-3.65" y="-1.1" dx="0.8" dy="1" layer="1" rot="R90"/>
+<smd name="4" x="-3.65" y="1.1" dx="0.8" dy="1" layer="1" rot="R90"/>
+<smd name="1" x="-2.25" y="1.75" dx="0.7" dy="1.5" layer="1" rot="R180"/>
+<hole x="-1.5" y="0" drill="0.9"/>
+<hole x="1.5" y="0" drill="0.9"/>
+<text x="-4.27" y="3.38" size="1.27" layer="25">&gt;NAME</text>
+<text x="-4.34" y="-3.52" size="1.27" layer="27">&gt;VALUE</text>
+<wire x1="-3.15" y1="1.5" x2="3.15" y2="1.5" width="0.127" layer="21"/>
+<wire x1="3.15" y1="1.5" x2="3.15" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="3.15" y1="-1.5" x2="-3.15" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="-3.15" y1="-1.5" x2="-3.15" y2="1.5" width="0.127" layer="21"/>
+</package>
+<package name="SZA05A0A">
+<smd name="3" x="0" y="0" dx="1.3" dy="3.3" layer="1"/>
+<smd name="1" x="-1.4" y="0" dx="0.5" dy="3.3" layer="1"/>
+<smd name="2" x="1.4" y="0" dx="0.5" dy="3.3" layer="1"/>
+<smd name="11" x="-1.85" y="0" dx="0.4" dy="0.5" layer="1"/>
+<smd name="12" x="1.85" y="0" dx="0.4" dy="0.5" layer="1"/>
+<wire x1="1.75" y1="1.75" x2="1.74" y2="1.75" width="0.127" layer="21"/>
+<wire x1="-1.75" y1="1.75" x2="1.55" y2="1.75" width="0.127" layer="21"/>
+<wire x1="1.75" y1="1.55" x2="1.75" y2="-1.75" width="0.127" layer="21"/>
+<wire x1="1.75" y1="-1.75" x2="-1.75" y2="-1.75" width="0.127" layer="21"/>
+<wire x1="-1.75" y1="-1.75" x2="-1.75" y2="1.75" width="0.127" layer="21"/>
+</package>
+<package name="8-SMD-LED">
+<smd name="THRM" x="0" y="0" dx="2.9" dy="5" layer="1"/>
+<smd name="8" x="-2.15" y="1.94" dx="0.7" dy="1.12" layer="1"/>
+<smd name="5" x="-2.15" y="-1.94" dx="0.7" dy="1.12" layer="1"/>
+<smd name="4" x="2.15" y="-1.94" dx="0.7" dy="1.12" layer="1"/>
+<smd name="1" x="2.15" y="1.94" dx="0.7" dy="1.12" layer="1"/>
+<smd name="7" x="-2.15" y="0.63" dx="0.7" dy="1" layer="1"/>
+<smd name="6" x="-2.15" y="-0.63" dx="0.7" dy="1" layer="1"/>
+<smd name="3" x="2.15" y="-0.63" dx="0.7" dy="1" layer="1"/>
+<smd name="2" x="2.15" y="0.63" dx="0.7" dy="1" layer="1"/>
+<wire x1="2.7" y1="-2.7" x2="2.71" y2="-2.7" width="0.127" layer="21"/>
+<wire x1="2.5" y1="-2.7" x2="-2.7" y2="-2.7" width="0.127" layer="21"/>
+<wire x1="-2.7" y1="-2.7" x2="-2.7" y2="2.7" width="0.127" layer="21"/>
+<wire x1="-2.7" y1="2.7" x2="2.7" y2="2.7" width="0.127" layer="21"/>
+<wire x1="2.7" y1="2.7" x2="2.7" y2="-2.5" width="0.127" layer="21"/>
+</package>
+<package name="2-SMD-LED-NO-EXP">
+<smd name="THRM" x="0" y="0" dx="2.8" dy="1" layer="1"/>
+<smd name="1" x="0" y="1.13" dx="2.8" dy="0.55" layer="1"/>
+<smd name="2" x="0" y="-1.13" dx="2.8" dy="0.55" layer="1"/>
+<wire x1="0" y1="-0.65" x2="-0.01" y2="-0.65" width="0.127" layer="21"/>
+<wire x1="1.5" y1="1.5" x2="1.5" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="1.5" y1="-1.5" x2="-1.5" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="-1.5" y1="-1.5" x2="-1.5" y2="1.5" width="0.127" layer="21"/>
+<wire x1="-1.5" y1="1.5" x2="1.5" y2="1.5" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -127,7 +180,7 @@
 <pin name="VCC_2" x="5.08" y="2.54" visible="off" length="middle" rot="R180"/>
 <pin name="VCC_3" x="5.08" y="-2.54" visible="off" length="middle" rot="R180"/>
 <pin name="VCC_4" x="5.08" y="-5.08" visible="off" length="middle" rot="R180"/>
-<text x="-10.16" y="5.08" size="1.778" layer="95">&gt;name</text>
+<text x="-12.7" y="2.54" size="1.778" layer="95">&gt;name</text>
 </symbol>
 <symbol name="USB-MICROB-SMT">
 <wire x1="-5.08" y1="7.62" x2="5.08" y2="7.62" width="0.254" layer="94"/>
@@ -145,9 +198,49 @@
 <pin name="PAD2" x="-2.54" y="-12.7" length="middle" direction="nc" rot="R90"/>
 <pin name="PAD4" x="2.54" y="-12.7" length="middle" direction="nc" rot="R90"/>
 </symbol>
+<symbol name="PCM12SMTR">
+<wire x1="-5.08" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-2.54" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-2.54" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
+<pin name="OUT1" x="-2.54" y="7.62" length="middle" rot="R270"/>
+<pin name="IN" x="0" y="-7.62" length="middle" rot="R90"/>
+<pin name="OUT2" x="2.54" y="7.62" length="middle" rot="R270"/>
+<text x="5.08" y="2.54" size="1.27" layer="95">&gt;NAME</text>
+</symbol>
+<symbol name="SZA05A0A">
+<wire x1="2.54" y1="2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="2.54" width="0.254" layer="94"/>
+<pin name="AD" x="0" y="7.62" length="middle" rot="R270"/>
+<pin name="CD" x="0" y="-7.62" length="middle" rot="R90"/>
+<wire x1="-2.54" y1="2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
+</symbol>
+<symbol name="XLAMP_COLOR">
+<wire x1="-7.62" y1="2.54" x2="7.62" y2="2.54" width="0.254" layer="94"/>
+<wire x1="7.62" y1="2.54" x2="7.62" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-2.54" x2="-7.62" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-2.54" x2="-7.62" y2="2.54" width="0.254" layer="94"/>
+<pin name="RA" x="-5.08" y="7.62" length="middle" rot="R270"/>
+<pin name="GA" x="-2.54" y="7.62" length="middle" rot="R270"/>
+<pin name="BA" x="2.54" y="7.62" length="middle" rot="R270"/>
+<pin name="WA" x="5.08" y="7.62" length="middle" rot="R270"/>
+<pin name="RC" x="-5.08" y="-7.62" length="middle" rot="R90"/>
+<pin name="GC" x="-2.54" y="-7.62" length="middle" rot="R90"/>
+<pin name="BC" x="2.54" y="-7.62" length="middle" rot="R90"/>
+<pin name="WC" x="5.08" y="-7.62" length="middle" rot="R90"/>
+</symbol>
+<symbol name="LACN5MFBGB241Z">
+<wire x1="-2.54" y1="2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="2.54" width="0.254" layer="94"/>
+<pin name="AND" x="0" y="7.62" length="middle" rot="R270"/>
+<pin name="CTD" x="0" y="-7.62" length="middle" rot="R90"/>
+</symbol>
 </symbols>
 <devicesets>
-<deviceset name="PQ070XF01SZH">
+<deviceset name="PQ070XF01SZH" prefix="U">
 <description>PQ070XF01SZH voltage regulator (TO220-4 package)</description>
 <gates>
 <gate name="G$1" symbol="TO220-4" x="0" y="0"/>
@@ -166,7 +259,7 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="CR2032">
+<deviceset name="CR2032" prefix="P">
 <description>&lt;b&gt;CR2032/2025 20mm 3V lithium coin cell &lt;/b&gt;
 &lt;p&gt;
 Great for battery packup. Both SMT and THM holders. 
@@ -190,7 +283,7 @@ Note the THM package has the ground pads on both sides of the PCB so that the ma
 </device>
 </devices>
 </deviceset>
-<deviceset name="USB-MICROB-SMT">
+<deviceset name="USB-MICROB-SMT" prefix="USB">
 <description>USB micro B receptacle. 5 pin surface mount variant.</description>
 <gates>
 <gate name="G$1" symbol="USB-MICROB-SMT" x="0" y="0"/>
@@ -207,6 +300,81 @@ Note the THM package has the ground pads on both sides of the PCB so that the ma
 <connect gate="G$1" pin="PAD3" pad="3"/>
 <connect gate="G$1" pin="PAD4" pad="4"/>
 <connect gate="G$1" pin="VCC" pad="5"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PCM12SMTR" prefix="SW">
+<description>Three pin switch. Horizontal gull wing surface mount.</description>
+<gates>
+<gate name="G$1" symbol="PCM12SMTR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="PCM12SMTR">
+<connects>
+<connect gate="G$1" pin="IN" pad="2"/>
+<connect gate="G$1" pin="OUT1" pad="1"/>
+<connect gate="G$1" pin="OUT2" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SZA05A0A" prefix="D">
+<description>2 pin SMD LED from Seoul Semiconductors.</description>
+<gates>
+<gate name="G$1" symbol="SZA05A0A" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SZA05A0A">
+<connects>
+<connect gate="G$1" pin="AD" pad="1 11"/>
+<connect gate="G$1" pin="CD" pad="2 12"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="XLAMP_COLOR" prefix="D">
+<description>8 pin 4 color LED from XLAMP</description>
+<gates>
+<gate name="G$1" symbol="XLAMP_COLOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="8-SMD-LED">
+<connects>
+<connect gate="G$1" pin="BA" pad="3"/>
+<connect gate="G$1" pin="BC" pad="6"/>
+<connect gate="G$1" pin="GA" pad="2"/>
+<connect gate="G$1" pin="GC" pad="7"/>
+<connect gate="G$1" pin="RA" pad="1"/>
+<connect gate="G$1" pin="RC" pad="8"/>
+<connect gate="G$1" pin="WA" pad="4"/>
+<connect gate="G$1" pin="WC" pad="5"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="LACN5MFBGB241Z" prefix="D">
+<description>2 pin SMD LED from Osram Opto Semiconductors</description>
+<gates>
+<gate name="G$1" symbol="LACN5MFBGB241Z" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="2-SMD-LED-NO-EXP">
+<connects>
+<connect gate="G$1" pin="AND" pad="1"/>
+<connect gate="G$1" pin="CTD" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>
