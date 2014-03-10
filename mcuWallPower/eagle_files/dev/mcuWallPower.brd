@@ -109,7 +109,7 @@
 <wire x1="26.5" y1="0" x2="26.5" y2="30" width="0" layer="20"/>
 <wire x1="26.5" y1="30" x2="0" y2="30" width="0" layer="20"/>
 <wire x1="0" y1="30" x2="0" y2="0" width="0" layer="20"/>
-<text x="14.47" y="12.6" size="1" layer="52" rot="MR0">F. Lee
+<text x="25.04" y="8.45" size="1" layer="52" rot="MR0">F. Lee
 03/10/2014
 mcuWallPower
 R2</text>
