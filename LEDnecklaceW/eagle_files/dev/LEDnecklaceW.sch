@@ -58,21 +58,6 @@
 <libraries>
 <library name="freddyLibr">
 <packages>
-<package name="SMD_BATT_HOLDER_2032">
-<smd name="VCC" x="-14.65" y="0" dx="3.2" dy="4.2" layer="1"/>
-<smd name="GND" x="14.65" y="0" dx="3.2" dy="4.2" layer="1"/>
-<wire x1="-8.26" y1="-8" x2="-8.26" y2="8" width="0.127" layer="21" curve="-88.167819"/>
-<wire x1="8.26" y1="8" x2="8.26" y2="-8" width="0.127" layer="21" curve="-88.167819"/>
-<wire x1="-7.26" y1="-8" x2="-7.26" y2="8" width="0.127" layer="21" curve="-88.167819"/>
-</package>
-<package name="PHOTOCELL_CERAMIC">
-<wire x1="-2.15" y1="-1.38" x2="-2.15" y2="1.38" width="0.127" layer="21"/>
-<wire x1="2.15" y1="-1.38" x2="2.15" y2="1.38" width="0.127" layer="21"/>
-<wire x1="-2.15" y1="1.38" x2="2.15" y2="1.38" width="0.127" layer="21" curve="-114.610398"/>
-<wire x1="2.15" y1="-1.38" x2="-2.15" y2="-1.38" width="0.127" layer="21" curve="-114.610398"/>
-<pad name="2" x="0" y="-1.7" drill="0.6"/>
-<pad name="1" x="0" y="1.7" drill="0.6"/>
-</package>
 <package name="SZA05A0A">
 <smd name="3" x="0" y="0" dx="1.3" dy="3.3" layer="1"/>
 <smd name="1" x="-1.4" y="0" dx="0.5" dy="3.3" layer="1"/>
@@ -87,8 +72,34 @@
 <wire x1="2" y1="2" x2="1.7" y2="2" width="0.127" layer="21"/>
 <text x="-1.87" y="2.6" size="1.27" layer="21">&gt;NAME</text>
 </package>
+<package name="SMD_BATT_HOLDER_2032">
+<smd name="VCC" x="-14.65" y="0" dx="3.2" dy="4.2" layer="1"/>
+<smd name="GND" x="14.65" y="0" dx="3.2" dy="4.2" layer="1"/>
+<wire x1="-8.26" y1="-8" x2="-8.26" y2="8" width="0.127" layer="21" curve="-88.167819"/>
+<wire x1="8.26" y1="8" x2="8.26" y2="-8" width="0.127" layer="21" curve="-88.167819"/>
+<wire x1="-7.26" y1="-8" x2="-7.26" y2="8" width="0.127" layer="21" curve="-88.167819"/>
+<text x="0" y="-11" size="1.27" layer="25">&gt;NAME</text>
+</package>
+<package name="PHOTOCELL_CERAMIC">
+<wire x1="-2.15" y1="-1.38" x2="-2.15" y2="1.38" width="0.127" layer="21"/>
+<wire x1="2.15" y1="-1.38" x2="2.15" y2="1.38" width="0.127" layer="21"/>
+<wire x1="-2.15" y1="1.38" x2="2.15" y2="1.38" width="0.127" layer="21" curve="-114.610398"/>
+<wire x1="2.15" y1="-1.38" x2="-2.15" y2="-1.38" width="0.127" layer="21" curve="-114.610398"/>
+<pad name="2" x="0" y="-1.7" drill="0.6"/>
+<pad name="1" x="0" y="1.7" drill="0.6"/>
+<text x="-2.5" y="3.5" size="1.27" layer="25">&gt;NAME</text>
+</package>
 </packages>
 <symbols>
+<symbol name="SZA05A0A">
+<wire x1="2.54" y1="2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="2.54" width="0.254" layer="94"/>
+<pin name="AD" x="0" y="7.62" length="middle" rot="R270"/>
+<pin name="CD" x="0" y="-7.62" length="middle" rot="R90"/>
+<wire x1="-2.54" y1="2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
+<text x="5.08" y="2.54" size="1.778" layer="94">&gt;NAME</text>
+</symbol>
 <symbol name="SMD_BATT_HOLD">
 <wire x1="-2.54" y1="2.54" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
 <wire x1="-2.54" y1="-2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
@@ -105,18 +116,26 @@
 <pin name="1" x="0" y="7.62" length="middle" rot="R270"/>
 <pin name="2" x="0" y="-7.62" length="middle" rot="R90"/>
 </symbol>
-<symbol name="SZA05A0A">
-<wire x1="2.54" y1="2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="2.54" width="0.254" layer="94"/>
-<pin name="AD" x="0" y="7.62" length="middle" rot="R270"/>
-<pin name="CD" x="0" y="-7.62" length="middle" rot="R90"/>
-<wire x1="-2.54" y1="2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
-<text x="5.08" y="2.54" size="1.778" layer="94">&gt;NAME</text>
-</symbol>
 </symbols>
 <devicesets>
-<deviceset name="BU2032SM-BT-GCT" prefix="P">
+<deviceset name="SZA05A0A" prefix="D">
+<description>2 pin SMD LED from Seoul Semiconductors.</description>
+<gates>
+<gate name="G$1" symbol="SZA05A0A" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SZA05A0A">
+<connects>
+<connect gate="G$1" pin="AD" pad="1 11"/>
+<connect gate="G$1" pin="CD" pad="2 12"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BU2032SM-BT-GCT" prefix="P" uservalue="yes">
 <description>SMD 20.0 mm coin battery holder.</description>
 <gates>
 <gate name="G$1" symbol="SMD_BATT_HOLD" x="0" y="0"/>
@@ -133,7 +152,7 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="PDV-P8101" prefix="PC">
+<deviceset name="PDV-P8101" prefix="PC" uservalue="yes">
 <description>Photocell in ceramic package</description>
 <gates>
 <gate name="G$1" symbol="PHOTOCELL" x="0" y="0"/>
@@ -143,23 +162,6 @@
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="SZA05A0A" prefix="D">
-<description>2 pin SMD LED from Seoul Semiconductors.</description>
-<gates>
-<gate name="G$1" symbol="SZA05A0A" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SZA05A0A">
-<connects>
-<connect gate="G$1" pin="AD" pad="1 11"/>
-<connect gate="G$1" pin="CD" pad="2 12"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -3202,10 +3204,8 @@ type 0309, grid 2.5 mm</description>
 </class>
 </classes>
 <parts>
-<part name="P1" library="freddyLibr" deviceset="BU2032SM-BT-GCT" device=""/>
 <part name="R1" library="resistor" deviceset="R-US_" device="R0603"/>
 <part name="R2" library="resistor" deviceset="R-US_" device="R0603"/>
-<part name="PC1" library="freddyLibr" deviceset="PDV-P8101" device=""/>
 <part name="D1" library="freddyLibr" deviceset="SZA05A0A" device=""/>
 <part name="R3" library="resistor" deviceset="R-US_" device="R0603"/>
 <part name="D2" library="freddyLibr" deviceset="SZA05A0A" device=""/>
@@ -3223,16 +3223,16 @@ type 0309, grid 2.5 mm</description>
 <part name="R8" library="resistor" deviceset="R-US_" device="R0603"/>
 <part name="R9" library="resistor" deviceset="R-US_" device="R0603"/>
 <part name="R10" library="resistor" deviceset="R-US_" device="R0603"/>
+<part name="P1" library="freddyLibr" deviceset="BU2032SM-BT-GCT" device=""/>
+<part name="PC1" library="freddyLibr" deviceset="PDV-P8101" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 </plain>
 <instances>
-<instance part="P1" gate="G$1" x="-7.62" y="73.66"/>
 <instance part="R1" gate="G$1" x="15.24" y="76.2" rot="R90"/>
 <instance part="R2" gate="G$1" x="43.18" y="35.56" rot="R90"/>
-<instance part="PC1" gate="G$1" x="15.24" y="53.34"/>
 <instance part="D1" gate="G$1" x="43.18" y="53.34"/>
 <instance part="R3" gate="G$1" x="60.96" y="35.56" rot="R90"/>
 <instance part="D2" gate="G$1" x="60.96" y="53.34"/>
@@ -3250,25 +3250,25 @@ type 0309, grid 2.5 mm</description>
 <instance part="R8" gate="G$1" x="142.24" y="35.56" rot="R90"/>
 <instance part="R9" gate="G$1" x="157.48" y="35.56" rot="R90"/>
 <instance part="R10" gate="G$1" x="172.72" y="35.56" rot="R90"/>
+<instance part="P1" gate="G$1" x="-7.62" y="73.66"/>
+<instance part="PC1" gate="G$1" x="15.24" y="53.34"/>
 </instances>
 <busses>
 </busses>
 <nets>
 <net name="N$1" class="0">
 <segment>
-<pinref part="P1" gate="G$1" pin="VCC"/>
 <wire x1="-7.62" y1="81.28" x2="-7.62" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="-7.62" y1="86.36" x2="15.24" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="86.36" x2="15.24" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="P1" gate="G$1" pin="VCC"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
-<pinref part="P1" gate="G$1" pin="GND"/>
 <wire x1="-7.62" y1="66.04" x2="-7.62" y2="25.4" width="0.1524" layer="91"/>
 <wire x1="-7.62" y1="25.4" x2="15.24" y2="25.4" width="0.1524" layer="91"/>
-<pinref part="PC1" gate="G$1" pin="2"/>
 <wire x1="15.24" y1="45.72" x2="15.24" y2="25.4" width="0.1524" layer="91"/>
 <pinref part="R10" gate="G$1" pin="1"/>
 <wire x1="15.24" y1="25.4" x2="43.18" y2="25.4" width="0.1524" layer="91"/>
@@ -3297,6 +3297,8 @@ type 0309, grid 2.5 mm</description>
 <wire x1="60.96" y1="30.48" x2="60.96" y2="25.4" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="1"/>
 <wire x1="43.18" y1="30.48" x2="43.18" y2="25.4" width="0.1524" layer="91"/>
+<pinref part="P1" gate="G$1" pin="GND"/>
+<pinref part="PC1" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -3364,7 +3366,6 @@ type 0309, grid 2.5 mm</description>
 </net>
 <net name="N$15" class="0">
 <segment>
-<pinref part="PC1" gate="G$1" pin="1"/>
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="15.24" y1="71.12" x2="15.24" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="D9" gate="G$1" pin="AD"/>
@@ -3395,6 +3396,7 @@ type 0309, grid 2.5 mm</description>
 <wire x1="60.96" y1="60.96" x2="60.96" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="D1" gate="G$1" pin="AD"/>
 <wire x1="43.18" y1="60.96" x2="43.18" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="PC1" gate="G$1" pin="1"/>
 </segment>
 </net>
 </nets>
