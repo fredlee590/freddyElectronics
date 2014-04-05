@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.01" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -163,6 +163,23 @@
 <wire x1="-1.65" y1="-0.65" x2="1.65" y2="-0.65" width="0.127" layer="21"/>
 <text x="-1.55" y="2.25" size="1.27" layer="21">&gt;NAME</text>
 </package>
+<package name="PHOTOCELL_CERAMIC">
+<wire x1="-2.15" y1="-1.38" x2="-2.15" y2="1.38" width="0.127" layer="21"/>
+<wire x1="2.15" y1="-1.38" x2="2.15" y2="1.38" width="0.127" layer="21"/>
+<wire x1="-2.15" y1="1.38" x2="2.15" y2="1.38" width="0.127" layer="21" curve="-114.610398"/>
+<wire x1="2.15" y1="-1.38" x2="-2.15" y2="-1.38" width="0.127" layer="21" curve="-114.610398"/>
+<pad name="2" x="0" y="-1.7" drill="0.6"/>
+<pad name="1" x="0" y="1.7" drill="0.6"/>
+<text x="-2.5" y="3.5" size="1.27" layer="25">&gt;NAME</text>
+</package>
+<package name="SMD_BATT_HOLDER_2032">
+<smd name="VCC" x="-14.65" y="0" dx="3.2" dy="4.2" layer="1"/>
+<smd name="GND" x="14.65" y="0" dx="3.2" dy="4.2" layer="1"/>
+<wire x1="-8.26" y1="-8" x2="-8.26" y2="8" width="0.127" layer="21" curve="-88.167819"/>
+<wire x1="8.26" y1="8" x2="8.26" y2="-8" width="0.127" layer="21" curve="-88.167819"/>
+<wire x1="-7.26" y1="-8" x2="-7.26" y2="8" width="0.127" layer="21" curve="-88.167819"/>
+<text x="0" y="-11" size="1.27" layer="25">&gt;NAME</text>
+</package>
 </packages>
 <symbols>
 <symbol name="TO220-4">
@@ -247,6 +264,22 @@
 <pin name="AND" x="0" y="7.62" length="middle" rot="R270"/>
 <pin name="CTD" x="0" y="-7.62" length="middle" rot="R90"/>
 <text x="5.08" y="2.54" size="1.778" layer="94">&gt;NAME</text>
+</symbol>
+<symbol name="PHOTOCELL">
+<wire x1="-2.54" y1="2.54" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="-2.54" y2="2.54" width="0.254" layer="94"/>
+<pin name="1" x="0" y="7.62" length="middle" rot="R270"/>
+<pin name="2" x="0" y="-7.62" length="middle" rot="R90"/>
+</symbol>
+<symbol name="SMD_BATT_HOLD">
+<wire x1="-2.54" y1="2.54" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="-2.54" y2="2.54" width="0.254" layer="94"/>
+<pin name="VCC" x="0" y="7.62" length="middle" rot="R270"/>
+<pin name="GND" x="0" y="-7.62" length="middle" rot="R90"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -385,6 +418,40 @@ Note the THM package has the ground pads on both sides of the PCB so that the ma
 <connects>
 <connect gate="G$1" pin="AND" pad="1"/>
 <connect gate="G$1" pin="CTD" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PDV-P8101" prefix="PC" uservalue="yes">
+<description>Photocell in ceramic package</description>
+<gates>
+<gate name="G$1" symbol="PHOTOCELL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="PHOTOCELL_CERAMIC">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BU2032SM-BT-GCT" prefix="P" uservalue="yes">
+<description>SMD 20.0 mm coin battery holder.</description>
+<gates>
+<gate name="G$1" symbol="SMD_BATT_HOLD" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SMD_BATT_HOLDER_2032">
+<connects>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="VCC" pad="VCC"/>
 </connects>
 <technologies>
 <technology name=""/>
