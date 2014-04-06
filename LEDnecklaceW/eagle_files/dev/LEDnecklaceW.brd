@@ -60,6 +60,8 @@
 <wire x1="35" y1="0" x2="45" y2="35" width="0" layer="20"/>
 <wire x1="45" y1="35" x2="-10" y2="35" width="0" layer="20"/>
 <wire x1="-10" y1="35" x2="0" y2="0" width="0" layer="20"/>
+<text x="0.97" y="32.43" size="1.778" layer="22" rot="MR0">ON</text>
+<text x="15.46" y="32.43" size="1.778" layer="22" rot="MR0">OFF</text>
 </plain>
 <libraries>
 <library name="freddyLibr">
