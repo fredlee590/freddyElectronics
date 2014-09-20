@@ -2367,8 +2367,8 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <part name="PC1" library="freddyLibr" deviceset="PDV-P8101" device=""/>
 <part name="SW1" library="freddyLibr" deviceset="PCM12SMTR" device=""/>
 <part name="R1" library="pot" deviceset="TRIM_US-" device="B25P"/>
-<part name="JP1" library="pinhead" deviceset="PINHD-1X2" device=""/>
-<part name="JP2" library="pinhead" deviceset="PINHD-1X2" device=""/>
+<part name="IN" library="pinhead" deviceset="PINHD-1X2" device=""/>
+<part name="OUT" library="pinhead" deviceset="PINHD-1X2" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -2378,15 +2378,15 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <instance part="PC1" gate="G$1" x="5.08" y="53.34"/>
 <instance part="SW1" gate="G$1" x="-10.16" y="71.12" rot="R90"/>
 <instance part="R1" gate="G$1" x="5.08" y="33.02"/>
-<instance part="JP1" gate="G$1" x="-15.24" y="50.8"/>
-<instance part="JP2" gate="G$1" x="35.56" y="43.18"/>
+<instance part="IN" gate="G$1" x="-15.24" y="50.8"/>
+<instance part="OUT" gate="G$1" x="35.56" y="43.18"/>
 </instances>
 <busses>
 </busses>
 <nets>
 <net name="N$1" class="0">
 <segment>
-<pinref part="JP1" gate="G$1" pin="1"/>
+<pinref part="IN" gate="G$1" pin="1"/>
 <wire x1="-17.78" y1="53.34" x2="-25.4" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="-25.4" y1="53.34" x2="-25.4" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="SW1" gate="G$1" pin="OUT1"/>
@@ -2398,7 +2398,7 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <wire x1="-7.62" y1="22.86" x2="-7.62" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="-7.62" y1="60.96" x2="-25.4" y2="60.96" width="0.1524" layer="91"/>
 <junction x="-25.4" y="60.96"/>
-<pinref part="JP2" gate="G$1" pin="1"/>
+<pinref part="OUT" gate="G$1" pin="1"/>
 <wire x1="33.02" y1="45.72" x2="22.86" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="45.72" x2="22.86" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="58.42" x2="43.18" y2="58.42" width="0.1524" layer="91"/>
@@ -2409,7 +2409,7 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 </net>
 <net name="N$2" class="0">
 <segment>
-<pinref part="JP1" gate="G$1" pin="2"/>
+<pinref part="IN" gate="G$1" pin="2"/>
 <wire x1="-17.78" y1="50.8" x2="-27.94" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="-27.94" y1="50.8" x2="-27.94" y2="73.66" width="0.1524" layer="91"/>
 <pinref part="SW1" gate="G$1" pin="OUT2"/>
@@ -2429,7 +2429,7 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <pinref part="PC1" gate="G$1" pin="2"/>
 <pinref part="R1" gate="G$1" pin="E"/>
 <wire x1="5.08" y1="45.72" x2="5.08" y2="43.18" width="0.1524" layer="91"/>
-<pinref part="JP2" gate="G$1" pin="2"/>
+<pinref part="OUT" gate="G$1" pin="2"/>
 <wire x1="5.08" y1="43.18" x2="5.08" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="43.18" x2="5.08" y2="43.18" width="0.1524" layer="91"/>
 <junction x="5.08" y="43.18"/>
