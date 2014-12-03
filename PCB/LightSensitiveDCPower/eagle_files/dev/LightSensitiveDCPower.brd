@@ -428,10 +428,10 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="NAME" x="5.5" y="6.86" size="0.8128" layer="25" rot="R180"/>
 </element>
 <element name="IN" library="SparkFun-Connectors" package="SULLIN-1X4_HORIZ" value="" x="6" y="10.5" smashed="yes" rot="MR180">
-<attribute name="NAME" x="8.5278" y="12.035" size="0.8128" layer="26" rot="MR0"/>
+<attribute name="NAME" x="8.5278" y="12.035" size="1.016" layer="26" rot="MR0"/>
 </element>
 <element name="OUT" library="SparkFun-Connectors" package="SULLIN-1X4_HORIZ" value="" x="6" y="20.75" smashed="yes">
-<attribute name="NAME" x="1.0022" y="18.745" size="0.8128" layer="25"/>
+<attribute name="NAME" x="1.0022" y="18.535" size="1.016" layer="25"/>
 </element>
 </elements>
 <signals>
