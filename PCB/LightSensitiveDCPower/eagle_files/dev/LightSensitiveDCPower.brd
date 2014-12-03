@@ -107,10 +107,10 @@
 <board>
 <plain>
 <wire x1="0" y1="-0.01" x2="12" y2="0" width="0" layer="20"/>
-<wire x1="12" y1="0" x2="12" y2="37.5" width="0" layer="20"/>
-<wire x1="12" y1="37.5" x2="-0.01" y2="37.5" width="0" layer="20"/>
-<wire x1="-0.01" y1="37.5" x2="0" y2="-0.01" width="0" layer="20"/>
-<text x="5.1" y="11.78" size="0.3048" layer="51">LiSePow
+<wire x1="12" y1="0" x2="12" y2="31.25" width="0" layer="20"/>
+<wire x1="12" y1="31.25" x2="0" y2="31.25" width="0" layer="20"/>
+<wire x1="0" y1="31.25" x2="0" y2="-0.01" width="0" layer="20"/>
+<text x="5.25" y="8" size="0.3048" layer="51">LiSePow
 Rev1
 09/27/14</text>
 </plain>
@@ -417,21 +417,21 @@ Please make sure your boards conform to these design rules.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="PC1" library="freddyLibr" package="PHOTOCELL_CERAMIC" value="" x="6.5" y="23.5" smashed="yes" rot="R90">
-<attribute name="NAME" x="11.6" y="23.66" size="0.8128" layer="25" rot="R180"/>
+<element name="PC1" library="freddyLibr" package="PHOTOCELL_CERAMIC" value="" x="2.4" y="15.5" smashed="yes" rot="R180">
+<attribute name="NAME" x="2.48" y="11.82" size="0.8128" layer="25"/>
 </element>
-<element name="R1" library="pot" package="B25P" value="" x="8" y="17" smashed="yes">
-<attribute name="NAME" x="10.325" y="20.7" size="0.8128" layer="25" ratio="10"/>
-<attribute name="VALUE" x="4.8504" y="11.92" size="1.27" layer="27" ratio="10"/>
+<element name="R1" library="pot" package="B25P" value="" x="8.35" y="15.25" smashed="yes">
+<attribute name="NAME" x="9.695" y="18.97" size="0.8128" layer="25" ratio="10"/>
+<attribute name="VALUE" x="5.2004" y="10.17" size="1.27" layer="27" ratio="10"/>
 </element>
-<element name="SW1" library="freddyLibr" package="PCM12SMTR" value="PCM12SMTR" x="2.5" y="17.5" smashed="yes" rot="MR90">
-<attribute name="NAME" x="3.13" y="22.13" size="0.8128" layer="26" rot="MR0"/>
+<element name="SW1" library="freddyLibr" package="PCM12SMTR" value="PCM12SMTR" x="6" y="3" smashed="yes">
+<attribute name="NAME" x="4.2" y="6.88" size="0.8128" layer="25" rot="R180"/>
 </element>
-<element name="IN" library="SparkFun-Connectors" package="SULLIN-1X4_HORIZ" value="" x="6" y="10.5" smashed="yes" rot="R180">
-<attribute name="NAME" x="0.9022" y="11.635" size="0.8128" layer="25"/>
+<element name="IN" library="SparkFun-Connectors" package="SULLIN-1X4_HORIZ" value="" x="6" y="10.5" smashed="yes" rot="MR180">
+<attribute name="NAME" x="11.0978" y="11.635" size="0.8128" layer="26" rot="MR0"/>
 </element>
-<element name="OUT" library="SparkFun-Connectors" package="SULLIN-1X4_HORIZ" value="" x="6" y="27" smashed="yes">
-<attribute name="NAME" x="1.0022" y="24.995" size="0.8128" layer="25"/>
+<element name="OUT" library="SparkFun-Connectors" package="SULLIN-1X4_HORIZ" value="" x="6" y="20.75" smashed="yes">
+<attribute name="NAME" x="1.0022" y="18.745" size="0.8128" layer="25"/>
 </element>
 </elements>
 <signals>
@@ -440,26 +440,26 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="R1" pad="A"/>
 <contactref element="IN" pad="P$1"/>
 <contactref element="OUT" pad="P$1"/>
-<wire x1="9.81" y1="10.5" x2="2.19" y2="27" width="0" layer="19" extent="1-1"/>
-<wire x1="5.46" y1="17" x2="9.81" y2="10.5" width="0" layer="19" extent="1-1"/>
-<wire x1="4.25" y1="15.25" x2="5.46" y2="17" width="0" layer="19" extent="16-16"/>
+<wire x1="2.19" y1="10.5" x2="2.19" y2="20.75" width="0" layer="19" extent="1-1"/>
+<wire x1="5.81" y1="15.25" x2="2.19" y2="10.5" width="0" layer="19" extent="1-1"/>
+<wire x1="3.75" y1="4.75" x2="5.81" y2="15.25" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="N$2">
 <contactref element="SW1" pad="3"/>
 <contactref element="IN" pad="P$4"/>
-<wire x1="2.19" y1="10.5" x2="4.25" y2="19.75" width="0" layer="19" extent="16-16"/>
+<wire x1="9.81" y1="10.5" x2="8.25" y2="4.75" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="N$3">
 <contactref element="SW1" pad="2"/>
 <contactref element="PC1" pad="1"/>
-<wire x1="4.25" y1="18.25" x2="4.8" y2="23.5" width="0" layer="19" extent="16-16"/>
+<wire x1="6.75" y1="4.75" x2="2.4" y2="13.8" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="N$4">
 <contactref element="R1" pad="S"/>
 <contactref element="PC1" pad="2"/>
 <contactref element="OUT" pad="P$4"/>
-<wire x1="8" y1="19.54" x2="8.2" y2="23.5" width="0" layer="19" extent="1-1"/>
-<wire x1="9.81" y1="27" x2="8" y2="19.54" width="0" layer="19" extent="1-1"/>
+<wire x1="8.35" y1="17.79" x2="2.4" y2="17.2" width="0" layer="19" extent="1-1"/>
+<wire x1="9.81" y1="20.75" x2="8.35" y2="17.79" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 </board>
