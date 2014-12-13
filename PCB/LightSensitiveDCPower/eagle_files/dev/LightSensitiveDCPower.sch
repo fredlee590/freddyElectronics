@@ -117,22 +117,6 @@
 <pad name="1" x="0" y="1.7" drill="0.6"/>
 <text x="-2.5" y="3.5" size="1.27" layer="25">&gt;NAME</text>
 </package>
-<package name="PCM12SMTR">
-<smd name="2" x="0.75" y="1.75" dx="0.7" dy="1.5" layer="1" rot="R180"/>
-<smd name="3" x="2.25" y="1.75" dx="0.7" dy="1.5" layer="1"/>
-<smd name="7" x="3.65" y="-1.1" dx="0.8" dy="1" layer="1" rot="R90"/>
-<smd name="6" x="3.65" y="1.1" dx="0.8" dy="1" layer="1" rot="R90"/>
-<smd name="5" x="-3.65" y="-1.1" dx="0.8" dy="1" layer="1" rot="R90"/>
-<smd name="4" x="-3.65" y="1.1" dx="0.8" dy="1" layer="1" rot="R90"/>
-<smd name="1" x="-2.25" y="1.75" dx="0.7" dy="1.5" layer="1" rot="R180"/>
-<hole x="-1.5" y="0" drill="0.9"/>
-<hole x="1.5" y="0" drill="0.9"/>
-<text x="-4.27" y="3.38" size="1.27" layer="25">&gt;NAME</text>
-<wire x1="-3.15" y1="1.5" x2="3.15" y2="1.5" width="0.127" layer="21"/>
-<wire x1="3.15" y1="1.5" x2="3.15" y2="-1.5" width="0.127" layer="21"/>
-<wire x1="3.15" y1="-1.5" x2="-3.15" y2="-1.5" width="0.127" layer="21"/>
-<wire x1="-3.15" y1="-1.5" x2="-3.15" y2="1.5" width="0.127" layer="21"/>
-</package>
 </packages>
 <symbols>
 <symbol name="PHOTOCELL">
@@ -142,16 +126,6 @@
 <wire x1="2.54" y1="2.54" x2="-2.54" y2="2.54" width="0.254" layer="94"/>
 <pin name="1" x="0" y="7.62" length="middle" rot="R270"/>
 <pin name="2" x="0" y="-7.62" length="middle" rot="R90"/>
-</symbol>
-<symbol name="PCM12SMTR">
-<wire x1="-5.08" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
-<wire x1="5.08" y1="2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="5.08" y1="-2.54" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="-2.54" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
-<pin name="OUT1" x="-2.54" y="7.62" length="middle" rot="R270"/>
-<pin name="IN" x="0" y="-7.62" length="middle" rot="R90"/>
-<pin name="OUT2" x="2.54" y="7.62" length="middle" rot="R270"/>
-<text x="5.08" y="2.54" size="1.27" layer="95">&gt;NAME</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -165,24 +139,6 @@
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="PCM12SMTR" prefix="SW">
-<description>Three pin switch. Horizontal gull wing surface mount.</description>
-<gates>
-<gate name="G$1" symbol="PCM12SMTR" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="PCM12SMTR">
-<connects>
-<connect gate="G$1" pin="IN" pad="2"/>
-<connect gate="G$1" pin="OUT1" pad="1"/>
-<connect gate="G$1" pin="OUT2" pad="3"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -2870,7 +2826,6 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 </classes>
 <parts>
 <part name="PC1" library="freddyLibr" deviceset="PDV-P8101" device=""/>
-<part name="SW1" library="freddyLibr" deviceset="PCM12SMTR" device=""/>
 <part name="R1" library="pot" deviceset="TRIM_US-" device="B25P"/>
 <part name="IN" library="SparkFun-Connectors" deviceset="M04" device="HORIZ_PTH"/>
 <part name="OUT" library="SparkFun-Connectors" deviceset="M04" device="HORIZ_PTH"/>
@@ -2881,7 +2836,6 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 </plain>
 <instances>
 <instance part="PC1" gate="G$1" x="5.08" y="53.34"/>
-<instance part="SW1" gate="G$1" x="-10.16" y="71.12" rot="R90"/>
 <instance part="R1" gate="G$1" x="5.08" y="33.02"/>
 <instance part="IN" gate="G$1" x="-35.56" y="50.8"/>
 <instance part="OUT" gate="G$1" x="35.56" y="45.72" rot="R180"/>
@@ -2891,9 +2845,6 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <nets>
 <net name="N$1" class="0">
 <segment>
-<pinref part="SW1" gate="G$1" pin="OUT1"/>
-<wire x1="-25.4" y1="60.96" x2="-25.4" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="-25.4" y1="68.58" x2="-17.78" y2="68.58" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="A"/>
 <wire x1="5.08" y1="25.4" x2="5.08" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="5.08" y1="22.86" x2="-7.62" y2="22.86" width="0.1524" layer="91"/>
@@ -2904,7 +2855,6 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <wire x1="43.18" y1="58.42" x2="43.18" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="22.86" x2="5.08" y2="22.86" width="0.1524" layer="91"/>
 <junction x="5.08" y="22.86"/>
-<junction x="-25.4" y="60.96"/>
 <wire x1="-25.4" y1="60.96" x2="-25.4" y2="48.26" width="0.1524" layer="91"/>
 <pinref part="IN" gate="G$1" pin="1"/>
 <wire x1="-25.4" y1="48.26" x2="-30.48" y2="48.26" width="0.1524" layer="91"/>
@@ -2914,19 +2864,12 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 </net>
 <net name="N$2" class="0">
 <segment>
-<pinref part="SW1" gate="G$1" pin="OUT2"/>
-<wire x1="-27.94" y1="73.66" x2="-17.78" y2="73.66" width="0.1524" layer="91"/>
 <pinref part="IN" gate="G$1" pin="4"/>
 <wire x1="-30.48" y1="55.88" x2="-27.94" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="-27.94" y1="55.88" x2="-27.94" y2="73.66" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="SW1" gate="G$1" pin="IN"/>
 <pinref part="PC1" gate="G$1" pin="1"/>
-<wire x1="-2.54" y1="71.12" x2="5.08" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="5.08" y1="71.12" x2="5.08" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="60.96" x2="5.08" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="71.12" x2="-27.94" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="-27.94" y1="71.12" x2="-27.94" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$4" class="0">

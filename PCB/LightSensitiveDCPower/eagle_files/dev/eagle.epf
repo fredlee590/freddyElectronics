@@ -369,7 +369,7 @@ UsedLibrary="C:/Users/Freddy/Documents/eagle_external_lbr/Sullins/con-sullins.lb
 [Win_1]
 Type="Schematic Editor"
 Loc="656 327 1255 726"
-State=0
+State=3
 Number=2
 File="LightSensitiveDCPower.sch"
 View="-42.9224 19.901 44.946 81.3125"
@@ -411,6 +411,7 @@ ArcDirection=0
 AddLevel=2
 PadsSameType=0
 Layer=91
+Views=" 1: -42.9224 19.901 44.946 81.3125"
 Sheet="1"
 
 [Win_2]
