@@ -110,7 +110,7 @@
 <wire x1="12" y1="0" x2="12" y2="31.25" width="0" layer="20"/>
 <wire x1="12" y1="31.25" x2="0" y2="31.25" width="0" layer="20"/>
 <wire x1="0" y1="31.25" x2="0" y2="-0.01" width="0" layer="20"/>
-<text x="6.12" y="7.92" size="0.3048" layer="51">LiSePow
+<text x="6.12" y="7.92" size="0.3048" layer="25">LiSePow
 F. Lee
 Rev1
 12/16/14</text>
