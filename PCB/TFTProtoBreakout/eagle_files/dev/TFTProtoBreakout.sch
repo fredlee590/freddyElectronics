@@ -3769,28 +3769,6 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <wire x1="-22.86" y1="-12.7" x2="-15.24" y2="-12.7" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="LEDA" class="0">
-<segment>
-<pinref part="JP2" gate="G$1" pin="1"/>
-<wire x1="43.18" y1="5.08" x2="35.56" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="5.08" x2="35.56" y2="20.32" width="0.1524" layer="91"/>
-<pinref part="JP1" gate="G$1" pin="20"/>
-<wire x1="43.18" y1="22.86" x2="38.1" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="22.86" x2="38.1" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="20.32" x2="38.1" y2="17.78" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="17.78" x2="63.5" y2="17.78" width="0.1524" layer="91"/>
-<wire x1="63.5" y1="17.78" x2="63.5" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="63.5" y1="22.86" x2="81.28" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="22.86" x2="81.28" y2="20.32" width="0.1524" layer="91"/>
-<pinref part="JP7" gate="G$1" pin="2"/>
-<wire x1="81.28" y1="20.32" x2="81.28" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="15.24" x2="76.2" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="20.32" x2="38.1" y2="20.32" width="0.1524" layer="91"/>
-<pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="88.9" y1="17.78" x2="88.9" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="88.9" y1="20.32" x2="81.28" y2="20.32" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="GND" class="0">
 <segment>
 <pinref part="JP2" gate="G$1" pin="20"/>
@@ -3902,6 +3880,26 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <segment>
 <pinref part="SW4" gate="G$1" pin="OUT2"/>
 <wire x1="-38.1" y1="-10.16" x2="-45.72" y2="-10.16" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="JP2" gate="G$1" pin="1"/>
+<wire x1="43.18" y1="5.08" x2="35.56" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="5.08" x2="35.56" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="JP1" gate="G$1" pin="20"/>
+<wire x1="43.18" y1="22.86" x2="38.1" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="22.86" x2="38.1" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="20.32" x2="38.1" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="17.78" x2="63.5" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="17.78" x2="63.5" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="22.86" x2="81.28" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="22.86" x2="81.28" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="JP7" gate="G$1" pin="2"/>
+<wire x1="81.28" y1="20.32" x2="81.28" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="15.24" x2="76.2" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="20.32" x2="38.1" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="C1" gate="G$1" pin="1"/>
+<wire x1="88.9" y1="17.78" x2="88.9" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="20.32" x2="81.28" y2="20.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
