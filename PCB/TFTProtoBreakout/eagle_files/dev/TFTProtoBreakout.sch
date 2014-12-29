@@ -3533,13 +3533,13 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <part name="JP4" library="SparkFun-Connectors" deviceset="M02" device="PTH"/>
 <part name="JP5" library="SparkFun-Connectors" deviceset="M03" device="PTH"/>
 <part name="JP6" library="SparkFun-Connectors" deviceset="M09" device=""/>
-<part name="JP7" library="SparkFun-Connectors" deviceset="M02" device="PTH"/>
 <part name="R1" library="SparkFun-Resistors" deviceset="1KOHM1/10W1%(0603)" device="" value="1K"/>
 <part name="SW1" library="freddyLibr" deviceset="PCM12SMTR" device=""/>
 <part name="SW2" library="freddyLibr" deviceset="PCM12SMTR" device=""/>
 <part name="SW3" library="freddyLibr" deviceset="PCM12SMTR" device=""/>
 <part name="SW4" library="freddyLibr" deviceset="PCM12SMTR" device=""/>
 <part name="C1" library="SparkFun-Capacitors" deviceset="CAP" device="0805"/>
+<part name="JP7" library="SparkFun-Connectors" deviceset="M03" device="PTH"/>
 </parts>
 <sheets>
 <sheet>
@@ -3552,13 +3552,13 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <instance part="JP4" gate="G$1" x="0" y="-40.64"/>
 <instance part="JP5" gate="G$1" x="-15.24" y="-30.48"/>
 <instance part="JP6" gate="G$1" x="-2.54" y="-12.7"/>
-<instance part="JP7" gate="G$1" x="68.58" y="12.7"/>
 <instance part="R1" gate="G$1" x="30.48" y="71.12" rot="R180"/>
 <instance part="SW1" gate="G$1" x="-30.48" y="33.02" rot="R90"/>
 <instance part="SW2" gate="G$1" x="-30.48" y="17.78" rot="R90"/>
 <instance part="SW3" gate="G$1" x="-30.48" y="2.54" rot="R90"/>
 <instance part="SW4" gate="G$1" x="-30.48" y="-12.7" rot="R90"/>
 <instance part="C1" gate="G$1" x="88.9" y="12.7"/>
+<instance part="JP7" gate="G$1" x="68.58" y="15.24"/>
 </instances>
 <busses>
 </busses>
@@ -3776,13 +3776,13 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <wire x1="38.1" y1="-43.18" x2="38.1" y2="-50.8" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="-50.8" x2="81.28" y2="-50.8" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="-50.8" x2="81.28" y2="7.62" width="0.1524" layer="91"/>
-<pinref part="JP7" gate="G$1" pin="1"/>
 <wire x1="81.28" y1="7.62" x2="81.28" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="12.7" x2="76.2" y2="12.7" width="0.1524" layer="91"/>
 <label x="40.64" y="-50.8" size="1.778" layer="95"/>
 <pinref part="C1" gate="G$1" pin="2"/>
 <wire x1="88.9" y1="10.16" x2="88.9" y2="7.62" width="0.1524" layer="91"/>
 <wire x1="88.9" y1="7.62" x2="81.28" y2="7.62" width="0.1524" layer="91"/>
+<pinref part="JP7" gate="G$1" pin="1"/>
+<wire x1="81.28" y1="12.7" x2="76.2" y2="12.7" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="JP2" gate="G$1" pin="17"/>
@@ -3893,13 +3893,13 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <wire x1="63.5" y1="17.78" x2="63.5" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="22.86" x2="81.28" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="22.86" x2="81.28" y2="20.32" width="0.1524" layer="91"/>
-<pinref part="JP7" gate="G$1" pin="2"/>
 <wire x1="81.28" y1="20.32" x2="81.28" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="15.24" x2="76.2" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="20.32" x2="38.1" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="88.9" y1="17.78" x2="88.9" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="88.9" y1="20.32" x2="81.28" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="JP7" gate="G$1" pin="2"/>
+<wire x1="81.28" y1="15.24" x2="76.2" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
