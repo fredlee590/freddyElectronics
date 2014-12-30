@@ -167,7 +167,7 @@ SCL</text>
 <text x="31.242" y="18.288" size="0.6096" layer="25" rot="R90">NCS</text>
 <text x="30.988" y="13.462" size="0.6096" layer="25" rot="R90">Y+</text>
 <text x="30.988" y="10.922" size="0.6096" layer="25" rot="R90">Y-</text>
-<text x="2.286" y="2.286" size="1.27" layer="25">TFTBreakout
+<text x="1.27" y="1.27" size="1.27" layer="25">TFTProtoBreakout
 Rev1
 F. Lee
 12/29/14</text>
