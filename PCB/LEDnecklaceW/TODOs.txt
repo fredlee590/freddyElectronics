@@ -1,0 +1,11 @@
+v1.1
+FEATURE: Add an always ON mode for the necklace
+- Select and purchase 3 option switch
+- Create 3 option switch footprint
+- Adjust PCB board file to include 3 option switch
+v2.0
+FEATURE: Blinking Light mode
+- Develop circuit to enable blinking lights on breadboard
+- Analyze existing board for ideal location to insert blinking circuit
+- Create required footprints for blinking circuit
+- Adjust PCB board file to include blinking circuit
