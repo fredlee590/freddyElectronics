@@ -484,31 +484,31 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="C1" library="SparkFun-Capacitors" package="0603-CAP" value="" x="1.75" y="7.5" smashed="yes" rot="R270">
-<attribute name="NAME" x="2.531" y="9.442" size="0.4064" layer="25" font="vector"/>
-<attribute name="VALUE" x="0.607" y="8.516" size="0.4064" layer="27" font="vector" rot="R270"/>
+<element name="C1" library="SparkFun-Capacitors" package="0603-CAP" value="" x="7.99" y="4.5" smashed="yes" rot="MR180">
+<attribute name="NAME" x="5.711" y="3.318" size="0.4064" layer="26" font="vector" rot="MR180"/>
+<attribute name="VALUE" x="6.974" y="5.643" size="0.4064" layer="28" font="vector" rot="MR180"/>
 </element>
-<element name="C2" library="SparkFun-Capacitors" package="0603-CAP" value="" x="2.53" y="14.92" smashed="yes">
-<attribute name="NAME" x="0.721" y="13.252" size="0.4064" layer="25" font="vector"/>
-<attribute name="VALUE" x="1.514" y="13.777" size="0.4064" layer="27" font="vector"/>
+<element name="C2" library="SparkFun-Capacitors" package="0603-CAP" value="" x="5" y="11" smashed="yes" rot="MR270">
+<attribute name="NAME" x="4.021" y="13.058" size="0.4064" layer="26" font="vector" rot="MR180"/>
+<attribute name="VALUE" x="6.143" y="12.016" size="0.4064" layer="28" font="vector" rot="MR270"/>
 </element>
-<element name="JP1" library="SparkFun-Connectors" package="1X04" value="" x="2" y="18" smashed="yes">
-<attribute name="NAME" x="9.5038" y="14.7588" size="1.27" layer="25" ratio="10"/>
-<attribute name="VALUE" x="0.73" y="14.825" size="1.27" layer="27"/>
+<element name="JP1" library="SparkFun-Connectors" package="1X04" value="" x="2" y="14.75" smashed="yes">
+<attribute name="NAME" x="8.4538" y="11.7588" size="1.27" layer="25" ratio="10"/>
+<attribute name="VALUE" x="0.73" y="11.575" size="1.27" layer="27"/>
 </element>
-<element name="L1" library="SparkFun-Passives" package="0603" value="" x="5.37" y="12.39" smashed="yes">
-<attribute name="PROD_ID" value="RES-07859" x="5.37" y="12.39" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="7.191" y="12.442" size="0.4064" layer="25" font="vector"/>
-<attribute name="VALUE" x="4.354" y="11.247" size="0.4064" layer="27" font="vector"/>
+<element name="L1" library="SparkFun-Passives" package="0603" value="" x="7.75" y="11.25" smashed="yes" rot="MR0">
+<attribute name="PROD_ID" value="RES-07859" x="7.75" y="11.25" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="NAME" x="8.809" y="12.452" size="0.4064" layer="26" font="vector" rot="MR0"/>
+<attribute name="VALUE" x="8.766" y="10.107" size="0.4064" layer="28" font="vector" rot="MR0"/>
 </element>
-<element name="SW1" library="freddyLibr" package="PCM12SMTR" value="PCM12SMTR" x="4.67" y="2.01" smashed="yes" rot="MR0">
-<attribute name="NAME" x="6.24" y="5.13" size="1.27" layer="26" rot="MR0"/>
+<element name="SW1" library="freddyLibr" package="PCM12SMTR" value="PCM12SMTR" x="2" y="8.5" smashed="yes" rot="R270">
+<attribute name="NAME" x="0.53" y="2.72" size="1.27" layer="25"/>
 </element>
-<element name="USB1" library="freddyLibr" package="USB-MICROB-SMT" value="USB-MICROB-SMT5-PIN" x="4" y="2.5" smashed="yes">
-<attribute name="NAME" x="11.35" y="6.14" size="1.27" layer="25" rot="R180"/>
+<element name="USB1" library="freddyLibr" package="USB-MICROB-SMT" value="USB-MICROB-SMT5-PIN" x="8.5" y="2.25" smashed="yes">
+<attribute name="NAME" x="0.64" y="0.48" size="1.27" layer="25"/>
 </element>
-<element name="VR1" library="freddyLibr" package="UJ-5_TSOT" value="" x="5.3" y="8.51" smashed="yes">
-<attribute name="NAME" x="7.63" y="9.02" size="1.27" layer="25"/>
+<element name="VR1" library="freddyLibr" package="UJ-5_TSOT" value="" x="7.25" y="7.5" smashed="yes" rot="MR0">
+<attribute name="NAME" x="5.59" y="7.72" size="1.27" layer="26" rot="MR0"/>
 </element>
 </elements>
 <signals>
@@ -517,14 +517,14 @@ design rules under a new name.</description>
 <contactref element="VR1" pad="1"/>
 <contactref element="VR1" pad="3"/>
 <contactref element="C1" pad="2"/>
-<wire x1="6.25" y1="7.36" x2="2.42" y2="3.76" width="0" layer="19" extent="1-1"/>
-<wire x1="4.35" y1="7.36" x2="6.25" y2="7.36" width="0" layer="19" extent="1-1"/>
-<wire x1="1.75" y1="6.65" x2="4.35" y2="7.36" width="0" layer="19" extent="1-1"/>
+<wire x1="8.2" y1="6.35" x2="6.3" y2="6.35" width="0" layer="19" extent="1-1"/>
+<wire x1="8.84" y1="4.5" x2="8.2" y2="6.35" width="0" layer="19" extent="1-1"/>
+<wire x1="3.75" y1="6.25" x2="6.3" y2="6.35" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="N$2">
 <contactref element="VR1" pad="4"/>
 <contactref element="L1" pad="1"/>
-<wire x1="4.52" y1="12.39" x2="4.35" y2="9.66" width="0" layer="19" extent="1-1"/>
+<wire x1="8.2" y1="8.65" x2="8.6" y2="11.25" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="GND">
 <contactref element="C1" pad="1"/>
@@ -532,15 +532,15 @@ design rules under a new name.</description>
 <contactref element="C2" pad="1"/>
 <contactref element="USB1" pad="9"/>
 <contactref element="JP1" pad="1"/>
-<wire x1="5.3" y1="7.36" x2="5.3" y2="4.13" width="0" layer="19" extent="1-1"/>
-<wire x1="2" y1="18" x2="5.3" y2="7.36" width="0" layer="19" extent="1-1"/>
-<wire x1="1.68" y1="14.92" x2="2" y2="18" width="0" layer="19" extent="1-1"/>
-<wire x1="1.75" y1="8.35" x2="1.68" y2="14.92" width="0" layer="19" extent="1-1"/>
+<wire x1="5" y1="11.85" x2="2" y2="14.75" width="0" layer="19" extent="16-16"/>
+<wire x1="7.14" y1="4.5" x2="5" y2="11.85" width="0" layer="19" extent="1-16"/>
+<wire x1="7.25" y1="6.35" x2="7.14" y2="4.5" width="0" layer="19" extent="1-1"/>
+<wire x1="9.8" y1="3.88" x2="7.25" y2="6.35" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VIN">
 <contactref element="USB1" pad="5"/>
 <contactref element="SW1" pad="2"/>
-<wire x1="3.92" y1="3.76" x2="2.7" y2="4.13" width="0" layer="19" extent="1-1"/>
+<wire x1="7.2" y1="3.88" x2="3.75" y2="7.75" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="VOUT">
 <contactref element="L1" pad="2"/>
@@ -548,10 +548,10 @@ design rules under a new name.</description>
 <contactref element="C2" pad="2"/>
 <contactref element="SW1" pad="1"/>
 <contactref element="JP1" pad="2"/>
-<wire x1="6.22" y1="12.39" x2="3.38" y2="14.92" width="0" layer="19" extent="1-1"/>
-<wire x1="4.54" y1="18" x2="6.22" y2="12.39" width="0" layer="19" extent="1-1"/>
-<wire x1="6.92" y1="3.76" x2="4.54" y2="18" width="0" layer="19" extent="1-1"/>
-<wire x1="6.25" y1="9.66" x2="6.22" y2="12.39" width="0" layer="19" extent="1-1"/>
+<wire x1="6.3" y1="8.65" x2="6.9" y2="11.25" width="0" layer="19" extent="1-16"/>
+<wire x1="4.54" y1="14.75" x2="6.9" y2="11.25" width="0" layer="19" extent="16-16"/>
+<wire x1="5" y1="10.15" x2="6.3" y2="8.65" width="0" layer="19" extent="1-16"/>
+<wire x1="3.75" y1="10.75" x2="5" y2="10.15" width="0" layer="19" extent="16-16"/>
 </signal>
 </signals>
 </board>
