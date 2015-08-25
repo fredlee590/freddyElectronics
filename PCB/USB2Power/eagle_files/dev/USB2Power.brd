@@ -142,6 +142,10 @@
 <wire x1="12.5" y1="0" x2="12.5" y2="16.75" width="0" layer="20"/>
 <wire x1="12.5" y1="16.75" x2="0" y2="16.75" width="0" layer="20"/>
 <wire x1="0" y1="16.75" x2="0" y2="0" width="0" layer="20"/>
+<text x="5.01" y="8.51" size="0.6096" layer="23">F. Lee
+8/24/15
+USB2Power
+Rev. 1</text>
 </plain>
 <libraries>
 <library name="SparkFun-Capacitors">
@@ -583,4 +587,10 @@ Please make sure your boards conform to these design rules.</description>
 </signals>
 </board>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>
