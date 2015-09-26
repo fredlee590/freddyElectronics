@@ -8,7 +8,7 @@
 #include <p18f24j50.h>
 #include <usart.h>
 
-#pragma config WDTEN = ON
+#pragma config WDTEN = OFF
 #pragma config OSC = INTOSC
 #pragma config DEBUG = ON
 #pragma config XINST = OFF
