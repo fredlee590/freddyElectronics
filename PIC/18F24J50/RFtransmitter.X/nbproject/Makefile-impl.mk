@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=basicSerial.X
+PROJECTNAME=RFtransmitter.X
 
 # Active Configuration
 DEFAULTCONF=default
