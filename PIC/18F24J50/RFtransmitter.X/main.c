@@ -123,13 +123,25 @@ void main(void)
     LATAbits.LATA2 = 1; // CSN
     LATAbits.LATA3 = 1; // CE
 
-    //if(readStatus())
-    if(readReg(0x00, data, 1) & 0x8)
+     if(readReg(0x00, data, 1) & 0x8)
         LATAbits.LATA0 = 1;
     
     if(*data & 0x8)
         LATAbits.LATA0 = 0;
     
+    *data = 0b00001010;
+    
+    if(*data == 0x0A)
+        LATAbits.LATA0 = 1;
+    
+    writeReg(0x00, data, 1);
+    /*
+    if(readReg(0x00, data, 1));
+        LATAbits.LATA0 = 0;
+    
+    if(*data)
+        LATAbits.LATA0 = 1;
+    */
     CloseSPI1();
 
     while(1);
