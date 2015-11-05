@@ -37,16 +37,16 @@ unsigned char readStatus()
     return result;
 }
 
-unsigned char writeReg(unsigned char addr, unsigned char* data,
+char writeReg(unsigned char addr, unsigned char* data,
         unsigned char len)
 {
-    unsigned char cmd, i, result;
+    unsigned char cmd, i;
     // Make sure address only takes least significant 5 bits
     if(addr & 11100000)
-        return 0;
+        return -1;
     
     if(len < 1)
-        return 0;
+        return -1;
     
     // prepare to send
     cmd = addr | WRITE_CMD;
@@ -55,7 +55,7 @@ unsigned char writeReg(unsigned char addr, unsigned char* data,
     // address goes first
     WriteSPI1(cmd);
     while(!DataRdySPI1());
-    result = ReadSPI1();
+    ReadSPI1();
 
     for(i = 0; i < len; i++)
     {
@@ -66,19 +66,19 @@ unsigned char writeReg(unsigned char addr, unsigned char* data,
     
     LATAbits.LATA2 = 1;
     
-    return result;
+    return 0;
 }
 
-unsigned char readReg(unsigned char addr, unsigned char* data,
+char readReg(unsigned char addr, unsigned char* data,
         unsigned char len)
 {
-    unsigned char cmd, i, result;
+    unsigned char cmd, i;
     // Make sure address only takes least significant 5 bits
     if(addr & 11100000)
-        return 0;
+        return -1;
     
     if(len < 1)
-        return 0;
+        return -1;
     
     // prepare to send
     cmd = addr | READ_CMD;
@@ -87,7 +87,7 @@ unsigned char readReg(unsigned char addr, unsigned char* data,
     // address goes first
     WriteSPI1(cmd);
     while(!DataRdySPI1());
-    result = ReadSPI1();
+    ReadSPI1();
 
     for(i = 0; i < len; i++)
     {
@@ -98,7 +98,7 @@ unsigned char readReg(unsigned char addr, unsigned char* data,
 
     LATAbits.LATA2 = 1;
     
-    return result;
+    return 0;
 }
 
 // program goes here
@@ -123,7 +123,7 @@ void main(void)
     LATAbits.LATA2 = 1; // CSN
     LATAbits.LATA3 = 1; // CE
 
-     if(readReg(0x00, data, 1) & 0x8)
+     if(!readReg(0x00, data, 1))
         LATAbits.LATA0 = 1;
     
     if(*data & 0x8)
@@ -134,14 +134,15 @@ void main(void)
     if(*data == 0x0A)
         LATAbits.LATA0 = 1;
     
-    writeReg(0x00, data, 1);
-    /*
-    if(readReg(0x00, data, 1));
+    if(!writeReg(0x00, data, 1)) // write is broken
         LATAbits.LATA0 = 0;
+
+    if(!readReg(0x00, data, 1));
+        LATAbits.LATA0 = 1;
     
     if(*data)
-        LATAbits.LATA0 = 1;
-    */
+        LATAbits.LATA0 = 0;
+    
     CloseSPI1();
 
     while(1);
