@@ -4,9 +4,8 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>../../../../Program Files (x86)/Microchip/mplabc18/v3.47/h/p18f24j50.h</itemPath>
-      <itemPath>../../../../Program Files (x86)/Microchip/mplabc18/v3.47/h/usart.h</itemPath>
-      <itemPath>../../../../Program Files (x86)/Microchip/mplabc18/v3.47/h/spi.h</itemPath>
+      <itemPath>../../../../../../../../Program Files (x86)/Microchip/mplabc18/v3.47/h/p18f24j50.h</itemPath>
+      <itemPath>../../../../../../../../Program Files (x86)/Microchip/mplabc18/v3.47/h/spi.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -26,6 +25,7 @@
   <sourceRootList>
     <Elem>../../../../Program Files (x86)/Microchip/mplabc18/v3.47/h</Elem>
     <Elem>../../../../Program Files (x86)/Microchip/mplabc18/v3.47/src/pmc_common/USART</Elem>
+    <Elem>../../../../../../../../Program Files (x86)/Microchip/mplabc18/v3.47/h</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -109,7 +109,6 @@
         <property key="ToolFirmwareFilePath"
                   value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
-        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>
