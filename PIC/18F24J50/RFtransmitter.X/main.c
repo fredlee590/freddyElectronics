@@ -54,14 +54,11 @@ char writeReg(unsigned char addr, unsigned char* data,
     
     // address goes first
     WriteSPI1(cmd);
-    while(!DataRdySPI1());
-    ReadSPI1();
 
     for(i = 0; i < len; i++)
     {
-        WriteSPI(data[i]);
         while(!DataRdySPI1());
-        ReadSPI1();
+        WriteSPI(data[i]);
     }
     
     LATAbits.LATA2 = 1;
@@ -86,12 +83,9 @@ char readReg(unsigned char addr, unsigned char* data,
     
     // address goes first
     WriteSPI1(cmd);
-    while(!DataRdySPI1());
-    ReadSPI1();
 
     for(i = 0; i < len; i++)
     {
-        WriteSPI(0);
         while(!DataRdySPI1());
         data[i] = ReadSPI1();
     }
@@ -123,26 +117,14 @@ void main(void)
     LATAbits.LATA2 = 1; // CSN
     LATAbits.LATA3 = 1; // CE
 
-     if(!readReg(0x00, data, 1))
-        LATAbits.LATA0 = 1;
-    
-    if(*data & 0x8)
-        LATAbits.LATA0 = 0;
-    
-    *data = 0b00001010;
-    
-    if(*data == 0x0A)
-        LATAbits.LATA0 = 1;
-    
-    if(!writeReg(0x00, data, 1)) // write is broken
-        LATAbits.LATA0 = 0;
+    readReg(0x00, data, 1);
+    LATAbits.LATA0 = 1;
+    data[0] = 0x0A;
+    writeReg(0x00, data, 1);
+    LATAbits.LATA0 = 0;
+    readReg(0x00, data, 1);
+    LATAbits.LATA0 = 1;
 
-    if(!readReg(0x00, data, 1));
-        LATAbits.LATA0 = 1;
-    
-    if(*data)
-        LATAbits.LATA0 = 0;
-    
     CloseSPI1();
 
     while(1);
