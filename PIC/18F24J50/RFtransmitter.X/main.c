@@ -28,9 +28,7 @@ unsigned char readStatus()
 
     LATAbits.LATA2 = 0;
     
-    WriteSPI1(NOP_CMD);
-    while(!DataRdySPI1());
-    result = ReadSPI1();
+    result = WriteSPI1(NOP_CMD);
 
     LATAbits.LATA2 = 1;
     
@@ -58,7 +56,7 @@ char writeReg(unsigned char addr, unsigned char* data,
     for(i = 0; i < len; i++)
     {
         while(!DataRdySPI1());
-        WriteSPI(data[i]);
+        WriteSPI1(data[i]);
     }
     
     LATAbits.LATA2 = 1;
