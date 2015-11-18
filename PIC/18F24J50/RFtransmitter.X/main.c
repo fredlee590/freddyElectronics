@@ -24,15 +24,13 @@
 
 unsigned char readStatus()
 {
-    unsigned char result;
-
     LATAbits.LATA2 = 0;
     
-    result = WriteSPI1(NOP_CMD);
+    WriteSPI1(NOP_CMD);
 
     LATAbits.LATA2 = 1;
     
-    return result;
+    return SSP1BUF;
 }
 
 char writeReg(unsigned char addr, unsigned char* data,
@@ -115,13 +113,26 @@ void main(void)
     LATAbits.LATA2 = 1; // CSN
     LATAbits.LATA3 = 1; // CE
 
-    readReg(0x00, data, 1);
-    LATAbits.LATA0 = 1;
+    // power up to stand by
     data[0] = 0x0A;
     writeReg(0x00, data, 1);
-    LATAbits.LATA0 = 0;
+
+#ifdef __DEBUG
+    // check to confirm what we just wrote in
     readReg(0x00, data, 1);
-    LATAbits.LATA0 = 1;
+    
+    if(*data == 0x0A)
+        LATAbits.LATA0 = 1;
+    
+    if(readStatus() != 0x0E)
+        LATAbits.LATA0 = 0;
+#endif
+    
+    // any configuration - let's use all defaults for now.
+    
+    // enter TX mode
+    
+    // send stuff as a test
 
     CloseSPI1();
 
