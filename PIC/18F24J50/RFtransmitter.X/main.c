@@ -18,10 +18,10 @@
 #pragma config XINST = OFF
 
 // commonly used commands
-#define READ_CMD    0b00000000
-#define WRITE_CMD   0b00100000
-#define W_PLD_CMD   0b10100000
-#define NOP_CMD     0b11111111
+#define READ_CMD        0b00000000
+#define WRITE_CMD       0b00100000
+#define W_PLD_NA_CMD    0b10110000
+#define NOP_CMD         0b11111111
 
 // PINS
 #define LED LATAbits.LATA0
@@ -101,7 +101,7 @@ char writePayload(unsigned char* data, unsigned char len)
     if(len > 32)
         return -1;
 
-    WriteSPI1(W_PLD_CMD);
+    WriteSPI1(W_PLD_NA_CMD);
     
     for(i = 0; i < len; i++)
     {
@@ -114,6 +114,9 @@ void sendPayload()
     CE = 1;
     // wait at least 10 us
     Nop(); // Q: how long is one NOP?
+    Nop();
+    Nop();
+    Nop();
     CE = 0;
 }
 // program goes here
@@ -144,7 +147,7 @@ void main(void)
 #endif
 
     // power up to stand by
-    data[0] = 0x0A;
+    data[0] = 0x7A;
     writeReg(0x00, data, 1);
 
 #ifdef __DEBUG
