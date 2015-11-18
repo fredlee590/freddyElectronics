@@ -17,18 +17,22 @@
 #pragma config DEBUG = ON
 #pragma config XINST = OFF
 
-#define LENGTH      3
+// commonly used commands
 #define READ_CMD    0b00000000
 #define WRITE_CMD   0b00100000
+#define W_PLD_CMD   0b10100000
 #define NOP_CMD     0b11111111
+
+// PINS
+#define LED LATAbits.LATA0
+#define CSN LATAbits.LATA2
+#define CE  LATAbits.LATA3
 
 unsigned char readStatus()
 {
-    LATAbits.LATA2 = 0;
-    
+    CSN = 0;
     WriteSPI1(NOP_CMD);
-
-    LATAbits.LATA2 = 1;
+    CSN = 1;
     
     return SSP1BUF;
 }
@@ -46,7 +50,7 @@ char writeReg(unsigned char addr, unsigned char* data,
     
     // prepare to send
     cmd = addr | WRITE_CMD;
-    LATAbits.LATA2 = 0;
+    CSN = 0;
     
     // address goes first
     WriteSPI1(cmd);
@@ -57,7 +61,7 @@ char writeReg(unsigned char addr, unsigned char* data,
         WriteSPI1(data[i]);
     }
     
-    LATAbits.LATA2 = 1;
+    CSN = 1;
     
     return 0;
 }
@@ -75,7 +79,7 @@ char readReg(unsigned char addr, unsigned char* data,
     
     // prepare to send
     cmd = addr | READ_CMD;
-    LATAbits.LATA2 = 0;
+    CSN = 0;
     
     // address goes first
     WriteSPI1(cmd);
@@ -86,11 +90,32 @@ char readReg(unsigned char addr, unsigned char* data,
         data[i] = ReadSPI1();
     }
 
-    LATAbits.LATA2 = 1;
+    CSN = 1;
     
     return 0;
 }
 
+char writePayload(unsigned char* data, unsigned char len)
+{
+    unsigned char i;
+    if(len > 32)
+        return -1;
+
+    WriteSPI1(W_PLD_CMD);
+    
+    for(i = 0; i < len; i++)
+    {
+        WriteSPI1(data[i]);
+    }
+}
+
+void sendPayload()
+{
+    CE = 1;
+    // wait at least 10 us
+    Nop(); // Q: how long is one NOP?
+    CE = 0;
+}
 // program goes here
 void main(void)
 {
@@ -109,9 +134,14 @@ void main(void)
 
     OpenSPI1(SPI_FOSC_64, MODE_00, SMPMID);
 
-    LATAbits.LATA0 = 0; // LED
-    LATAbits.LATA2 = 1; // CSN
-    LATAbits.LATA3 = 1; // CE
+    LED = 0; // LED
+    CSN = 1; // CSN
+    CE = 0; // CE
+
+#ifdef __DEBUG
+    if(readStatus() == 0x0E)
+        LED = 1;
+#endif
 
     // power up to stand by
     data[0] = 0x0A;
@@ -122,18 +152,25 @@ void main(void)
     readReg(0x00, data, 1);
     
     if(*data == 0x0A)
-        LATAbits.LATA0 = 1;
-    
-    if(readStatus() != 0x0E)
-        LATAbits.LATA0 = 0;
+        LED = 0;
 #endif
     
     // any configuration - let's use all defaults for now.
     
-    // enter TX mode
+    // queue up data to send
+    data[0] = 1;
+    data[1] = 2;
+    data[2] = 3;
+    writePayload(data, 3);
     
-    // send stuff as a test
-
+    // send CE pulse to transmit TXFIFO
+    sendPayload();
+    
+#ifdef __DEBUG
+    while(!(readStatus() & 0b00100000))
+        LED = 0;
+    LED = 1;
+#endif
     CloseSPI1();
 
     while(1);
