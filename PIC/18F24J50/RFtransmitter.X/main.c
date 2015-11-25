@@ -11,6 +11,7 @@
 
 #include <p18f24j50.h>
 #include <spi.h>
+#include <delays.h>
 
 #pragma config WDTEN = OFF
 #pragma config OSC = INTOSC
@@ -111,12 +112,16 @@ char writePayload(unsigned char* data, unsigned char len)
 
 void sendPayload()
 {
+    unsigned int i, j;
     CE = 1;
     // wait at least 10 us
-    Nop(); // Q: how long is one NOP?
-    Nop();
-    Nop();
-    Nop();
+    for(i = 0; i < 20; i++)
+    {
+        for(j = 0; j < 2; j++)
+        {
+            Delay1TCY();
+        }
+    }
     CE = 0;
 }
 // program goes here
@@ -159,6 +164,14 @@ void main(void)
 #endif
     
     // any configuration - let's use all defaults for now.
+    data[0] = 0x00; 
+    writeReg(0x01, data, 1);
+    data[0] = 0x03;
+    writeReg(0x03, data, 1);
+    data[0] = 0x00;
+    writeReg(0x04, data, 1);
+    data[0] = 0x07;
+    writeReg(0x06, data, 1);
     
     // queue up data to send
     data[0] = 1;
@@ -167,7 +180,7 @@ void main(void)
     writePayload(data, 3);
     
     // send CE pulse to transmit TXFIFO
-    sendPayload();
+    //sendPayload();
     
 #ifdef __DEBUG
     while(!(readStatus() & 0b00100000))
