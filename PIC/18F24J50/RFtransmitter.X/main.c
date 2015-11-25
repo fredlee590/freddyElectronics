@@ -38,15 +38,11 @@ unsigned char readStatus()
     return SSP1BUF;
 }
 
-char writeReg(unsigned char addr, unsigned char* data,
-        unsigned char len)
+char writeReg(unsigned char addr, unsigned char data)
 {
     unsigned char cmd, i;
     // Make sure address only takes least significant 5 bits
     if(addr & 11100000)
-        return -1;
-    
-    if(len < 1)
         return -1;
     
     // prepare to send
@@ -55,12 +51,9 @@ char writeReg(unsigned char addr, unsigned char* data,
     
     // address goes first
     WriteSPI1(cmd);
-
-    for(i = 0; i < len; i++)
-    {
-        while(!DataRdySPI1());
-        WriteSPI1(data[i]);
-    }
+    while(!DataRdySPI1());
+    WriteSPI1(data);
+    while(!DataRdySPI1());
     
     CSN = 1;
     
@@ -152,26 +145,21 @@ void main(void)
 #endif
 
     // power up to stand by
-    data[0] = 0x7A;
-    writeReg(0x00, data, 1);
+    writeReg(0x00, 0x7A);
 
 #ifdef __DEBUG
     // check to confirm what we just wrote in
     readReg(0x00, data, 1);
     
-    if(*data == 0x0A)
+    if(*data == 0x7A)
         LED = 0;
 #endif
     
-    // any configuration - let's use all defaults for now.
-    data[0] = 0x00; 
-    writeReg(0x01, data, 1);
-    data[0] = 0x03;
-    writeReg(0x03, data, 1);
-    data[0] = 0x00;
-    writeReg(0x04, data, 1);
-    data[0] = 0x07;
-    writeReg(0x06, data, 1);
+    // any configuration
+    writeReg(0x01, 0x00);
+    writeReg(0x03, 0x3);
+    writeReg(0x04, 0x00);
+    writeReg(0x06, 0x07);
     
     // queue up data to send
     data[0] = 1;
@@ -180,12 +168,12 @@ void main(void)
     writePayload(data, 3);
     
     // send CE pulse to transmit TXFIFO
-    //sendPayload();
+    sendPayload();
     
 #ifdef __DEBUG
-    while(!(readStatus() & 0b00100000))
-        LED = 0;
-    LED = 1;
+    //while(!(readStatus() & 0b00100000))
+    //    LED = 0;
+    //LED = 1;
 #endif
     CloseSPI1();
 
