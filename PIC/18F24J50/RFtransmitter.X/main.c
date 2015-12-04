@@ -22,6 +22,7 @@
 #define READ_CMD        0b00000000
 #define WRITE_CMD       0b00100000
 #define W_PLD_NA_CMD    0b10110000
+#define FLUSHTX_CMD     0b11100001
 #define NOP_CMD         0b11111111
 
 // PINS
@@ -95,12 +96,16 @@ char writePayload(unsigned char* data, unsigned char len)
     if(len > 32)
         return -1;
 
+    CSN = 0;
     WriteSPI1(W_PLD_NA_CMD);
     
     for(i = 0; i < len; i++)
     {
+        while(!DataRdySPI1())
         WriteSPI1(data[i]);
     }
+    CSN = 1;
+    return 0;
 }
 
 void sendPayload()
@@ -117,6 +122,16 @@ void sendPayload()
     }
     CE = 0;
 }
+
+void flushTXFIFO()
+{
+    CSN = 0;
+    
+    WriteSPI1(FLUSHTX_CMD);
+    
+    CSN = 1;
+}
+
 // program goes here
 void main(void)
 {
@@ -144,6 +159,12 @@ void main(void)
         LED = 1;
 #endif
 
+    // any configuration
+    writeReg(0x01, 0x00); // Auto ACK register - clear all for no auto ACK
+    writeReg(0x03, 0x03); // Configure address length field - default of 5 bits
+    writeReg(0x04, 0x00); // Retransmission register - default delay of 250 us
+    writeReg(0x06, 0x07); // RF register - RF power 0 dBm (highest) @ 1Mbps
+
     // power up to stand by
     writeReg(0x00, 0x7A);
 
@@ -155,11 +176,7 @@ void main(void)
         LED = 0;
 #endif
     
-    // any configuration
-    writeReg(0x01, 0x00);
-    writeReg(0x03, 0x3);
-    writeReg(0x04, 0x00);
-    writeReg(0x06, 0x07);
+    flushTXFIFO();        // apparently we need this
     
     // queue up data to send
     data[0] = 1;
@@ -167,6 +184,13 @@ void main(void)
     data[2] = 3;
     writePayload(data, 3);
     
+#ifdef __DEBUG
+    readReg(0x17, data, 1);
+    
+    if(*data == 0x11)
+        LED = 1;
+#endif
+
     // send CE pulse to transmit TXFIFO
     sendPayload();
     
