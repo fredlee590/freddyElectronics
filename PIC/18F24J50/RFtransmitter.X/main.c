@@ -132,6 +132,46 @@ void flushTXFIFO()
     CSN = 1;
 }
 
+void configure()
+{
+    // register 0x00
+    writeReg(0x00, 0x38);
+    // register 0x01
+    writeReg(0x01, 0x00); // Auto ACK register - clear all for no auto ACK
+    // register 0x04
+    writeReg(0x04, 0x00); // Retransmission register - default delay of 250 us
+    // register 0x03
+    writeReg(0x03, 0x03); // Configure address length field - default of 5 bits
+    // register 0x06
+    writeReg(0x06, 0x07); // RF register - RF power 0 dBm (highest) @ 1Mbps
+    // register 0x05 - default
+    // register 0x10 - default
+}
+
+void transmit(unsigned char * data, unsigned char len)
+{
+    unsigned char i;
+    // register 0x07
+    writeReg(0x07, 0x27); // RF register - RF power 0 dBm (highest) @ 1Mbps
+    // register 0x00 - power up
+    writeReg(0x00, 0x3A);
+    
+    // clear tx fifo
+    flushTXFIFO();        // apparently we need this
+    
+    // write in payload
+    writePayload(data, len);
+
+    // send CE pulse to transmit TXFIFO
+    sendPayload();    
+    
+#ifdef __DEBUG
+    while(readStatus() != 0x20)
+        LED = 0;
+    LED = 1;
+#endif
+}
+
 // program goes here
 void main(void)
 {
@@ -154,51 +194,14 @@ void main(void)
     CSN = 1; // CSN
     CE = 0; // CE
 
-#ifdef __DEBUG
-    if(readStatus() == 0x0E)
-        LED = 1;
-#endif
-
-    // any configuration
-    writeReg(0x01, 0x00); // Auto ACK register - clear all for no auto ACK
-    writeReg(0x03, 0x03); // Configure address length field - default of 5 bits
-    writeReg(0x04, 0x00); // Retransmission register - default delay of 250 us
-    writeReg(0x06, 0x07); // RF register - RF power 0 dBm (highest) @ 1Mbps
-
-    // power up to stand by
-    writeReg(0x00, 0x7A);
-
-#ifdef __DEBUG
-    // check to confirm what we just wrote in
-    readReg(0x00, data, 1);
-    
-    if(*data == 0x7A)
-        LED = 0;
-#endif
-    
-    flushTXFIFO();        // apparently we need this
-    
+    configure();
     // queue up data to send
     data[0] = 1;
     data[1] = 2;
     data[2] = 3;
-    writePayload(data, 3);
-    
-#ifdef __DEBUG
-    readReg(0x17, data, 1);
-    
-    if(*data == 0x11)
-        LED = 1;
-#endif
 
-    // send CE pulse to transmit TXFIFO
-    sendPayload();
-    
-#ifdef __DEBUG
-    //while(!(readStatus() & 0b00100000))
-    //    LED = 0;
-    //LED = 1;
-#endif
+    transmit(data, 3);
+
     CloseSPI1();
 
     while(1);
