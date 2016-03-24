@@ -1,0 +1,26 @@
+Web ID,Access ID,Salesorder Number,Shipping Method,Customer Number,Payment Method,
+154375555,16889,46040591,U.S. Postal Service First Class Mail* (Ships next business day),7092210,MasterCard,
+
+Shipping Address
+First Name,Last Name,Company,Mail Stop,Address Line 1,Address Line 2,City,State,Postal Code,Country,Email Address,Telephone,
+FREDERICK,LEE,,362 Bellevue Way NE,362 Bellevue Way NE,N 516,BELLEVUE,WA,98004,USA,FREDLEE590@GMAIL.COM,4257535906,
+
+Billing Address
+First Name,Last Name,Company,Mail Stop,Address Line 1,Address Line 2,City,State,Postal Code,Country,Email Address,Telephone,
+FREDERICK,LEE,,362 Bellevue Way NE,362 Bellevue Way NE,N 516,BELLEVUE,WA,98004,USA,,,
+
+Index,Quantity,Part Number,Description,Customer Reference,Available Quantity,Backorder Quantity,Unit Price USD,Extended Price USD,
+1,2,XQERED-00-0000-000000501CT-ND,LED XLAMP XQ-E RED,,2,0,1.22000,2.44,
+2,2,475-3115-1-ND,OSLON SSL, DEEP BLUE,,2,0,2.26000,4.52,
+3,10,PDV-P8101-ND,PHOTOCELL 4K-11K OHM 5.10MM,,10,0,1.80000,18.00,
+4,5,BK-885-CT-ND,HOLDER COIN CELL 12MM SMD,,5,0,0.53000,2.65,
+5,5,BC501SM-ND,HOLDER COIN CELL FOR CR1220 SMD,,5,0,0.88000,4.40,
+6,10,952-2223-ND,POLARISING KEY FOR FEMALE CONN,,10,0,0.40300,4.03,
+7,2,XBDRDO-00-0000-000000901CT-ND,XLAMP XBD COLOR ORANGE-RED,,2,0,2.03000,4.06,
+8,2,XBDAMB-00-0000-000000801CT-ND,LED XLAMP XB-D AMBER,,2,0,2.06000,4.12,
+9,2,XBDRED-00-0000-000000501CT-ND,XLAMP XBD COLOR RED,,2,0,1.38000,2.76,
+10,2,XTEARY-00-0000-000000K01CT-ND,LED XLAMP ROYAL BLUE 458NM,,2,0,2.57000,5.14,
+,,,,,,Subtotal,52.12
+,,,,,,Shipping,unknown
+,,,,,,Estimated Sales Tax,4.95
+,,,,,,Total,unknown
