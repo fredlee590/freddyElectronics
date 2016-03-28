@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.3.0">
+<eagle version="7.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.01" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -192,6 +192,19 @@
 <smd name="5" x="0.95" y="1.15" dx="0.5" dy="0.5" layer="1"/>
 <text x="1.69" y="1.08" size="1.27" layer="25">&gt;name</text>
 </package>
+<package name="XLAMP_XBD">
+<smd name="NC" x="0" y="0" dx="0.92" dy="2.3" layer="1"/>
+<smd name="AD" x="-0.98" y="0" dx="0.34" dy="2.3" layer="1" rot="R180"/>
+<smd name="CD" x="0.98" y="0" dx="0.34" dy="2.3" layer="1" rot="R180"/>
+<wire x1="-1.25" y1="1.25" x2="-0.65" y2="1.25" width="0.127" layer="21"/>
+<wire x1="-0.65" y1="1.25" x2="1.25" y2="1.25" width="0.127" layer="21"/>
+<wire x1="1.25" y1="1.25" x2="1.25" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="1.25" y1="-1.25" x2="-0.65" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="-0.65" y1="-1.25" x2="-1.25" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="-1.25" y1="-1.25" x2="-1.25" y2="1.25" width="0.127" layer="21"/>
+<wire x1="-0.65" y1="1.25" x2="-0.65" y2="-1.25" width="0.127" layer="21"/>
+<text x="-0.09" y="1.5" size="1.27" layer="25">&gt;NAME</text>
+</package>
 </packages>
 <symbols>
 <symbol name="TO220-4">
@@ -304,6 +317,15 @@
 <pin name="SW" x="12.7" y="5.08" length="middle" rot="R180"/>
 <pin name="FB" x="12.7" y="-5.08" length="middle" rot="R180"/>
 <text x="2.54" y="10.16" size="1.27" layer="95">&gt;name</text>
+</symbol>
+<symbol name="XLAMP_XBD">
+<wire x1="-2.54" y1="2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="2.54" width="0.254" layer="94"/>
+<pin name="AD" x="0" y="7.62" length="middle" rot="R270"/>
+<pin name="CD" x="0" y="-7.62" length="middle" rot="R90"/>
+<text x="2.54" y="2.54" size="1.778" layer="95">&gt;NAME</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -496,6 +518,22 @@ Note the THM package has the ground pads on both sides of the PCB so that the ma
 <connect gate="G$1" pin="GND" pad="2"/>
 <connect gate="G$1" pin="SW" pad="4"/>
 <connect gate="G$1" pin="VIN" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="XLAMP_XBD" prefix="D">
+<gates>
+<gate name="G$1" symbol="XLAMP_XBD" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="XLAMP_XBD">
+<connects>
+<connect gate="G$1" pin="AD" pad="AD"/>
+<connect gate="G$1" pin="CD" pad="CD"/>
 </connects>
 <technologies>
 <technology name=""/>
