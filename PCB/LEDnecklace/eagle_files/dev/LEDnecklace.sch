@@ -166,28 +166,25 @@
 <wire x1="3.15" y1="-1.5" x2="-3.15" y2="-1.5" width="0.127" layer="21"/>
 <wire x1="-3.15" y1="-1.5" x2="-3.15" y2="1.5" width="0.127" layer="21"/>
 </package>
-<package name="BC501SM_BATT_HOLD">
-<description>Battery holder for 2016 coin cell.</description>
-<smd name="VCC" x="8.23" y="0" dx="2.6" dy="3.54" layer="1" rot="R90"/>
-<smd name="GND" x="-7.57" y="0" dx="2.6" dy="3.66" layer="1" rot="R90"/>
-<hole x="-3.5" y="0" drill="1"/>
-<wire x1="0" y1="7.5" x2="7.28" y2="1.79" width="0.127" layer="21" curve="-76.186191"/>
-<wire x1="0" y1="-7.5" x2="-7.27" y2="-1.84" width="0.127" layer="21" curve="-75.796984"/>
-<hole x="4" y="0" drill="1.3"/>
-<text x="8.28" y="2.53" size="1.27" layer="25">&gt;NAME</text>
+<package name="CR1220/1225">
+<smd name="GND" x="0" y="0" dx="3.96" dy="3.96" layer="1"/>
+<wire x1="-6.6" y1="-3" x2="-6.6" y2="3" width="0.127" layer="21"/>
+<wire x1="6.6" y1="-3" x2="6.6" y2="3" width="0.127" layer="21"/>
+<text x="8" y="3.25" size="1.27" layer="25">&gt;NAME</text>
+<smd name="VCC1" x="-7.69" y="0" dx="4.17" dy="4.17" layer="1"/>
+<smd name="VCC2" x="7.69" y="0" dx="4.17" dy="4.17" layer="1"/>
 </package>
 <package name="XLAMP_XBD">
 <smd name="NC" x="0" y="0" dx="0.92" dy="2.3" layer="1"/>
 <smd name="AD" x="-0.98" y="0" dx="0.34" dy="2.3" layer="1" rot="R180"/>
 <smd name="CD" x="0.98" y="0" dx="0.34" dy="2.3" layer="1" rot="R180"/>
-<wire x1="-1.25" y1="1.25" x2="-0.65" y2="1.25" width="0.127" layer="21"/>
-<wire x1="-0.65" y1="1.25" x2="1.25" y2="1.25" width="0.127" layer="21"/>
-<wire x1="1.25" y1="1.25" x2="1.25" y2="-1.25" width="0.127" layer="21"/>
-<wire x1="1.25" y1="-1.25" x2="-0.65" y2="-1.25" width="0.127" layer="21"/>
-<wire x1="-0.65" y1="-1.25" x2="-1.25" y2="-1.25" width="0.127" layer="21"/>
-<wire x1="-1.25" y1="-1.25" x2="-1.25" y2="1.25" width="0.127" layer="21"/>
-<wire x1="-0.65" y1="1.25" x2="-0.65" y2="-1.25" width="0.127" layer="21"/>
-<text x="-0.09" y="1.5" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.05" y="1.67" size="1.27" layer="25">&gt;NAME</text>
+<wire x1="1.5" y1="1.5" x2="1.5" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="1.5" y1="-1.5" x2="-0.5" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="-1.5" y1="-1.5" x2="-1" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="-1.5" y1="-1.5" x2="-1.5" y2="-1" width="0.127" layer="21"/>
+<wire x1="1.5" y1="1.5" x2="-1.5" y2="1.5" width="0.127" layer="21"/>
+<wire x1="-1.5" y1="1.5" x2="-1.5" y2="-0.5" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -209,15 +206,15 @@
 <pin name="OUT2" x="2.54" y="7.62" length="middle" rot="R270"/>
 <text x="5.08" y="2.54" size="1.27" layer="95">&gt;NAME</text>
 </symbol>
-<symbol name="BC501SM_BATT_HOLD">
-<description>Battery holder for 2016 coin cell.</description>
-<wire x1="-5.08" y1="5.08" x2="5.08" y2="5.08" width="0.254" layer="94"/>
-<wire x1="5.08" y1="5.08" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="5.08" y1="-5.08" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="-5.08" x2="-5.08" y2="5.08" width="0.254" layer="94"/>
-<pin name="VCC" x="0" y="10.16" length="middle" rot="R270"/>
-<pin name="GND" x="0" y="-10.16" length="middle" rot="R90"/>
-<text x="7.62" y="5.08" size="1.778" layer="95">&gt;NAME</text>
+<symbol name="CR1220/1225">
+<wire x1="-2.54" y1="2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="2.54" width="0.254" layer="94"/>
+<pin name="VCC1" x="-7.62" y="0" length="middle"/>
+<pin name="VCC2" x="7.62" y="0" length="middle" rot="R180"/>
+<pin name="GND" x="0" y="-7.62" length="middle" rot="R90"/>
+<text x="2.54" y="2.54" size="1.27" layer="95">&gt;NAME</text>
 </symbol>
 <symbol name="XLAMP_XBD">
 <wire x1="-2.54" y1="2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
@@ -265,16 +262,16 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="BC501SM_BATT_HOLD" prefix="P">
-<description>Battery holder for 2016 coin cell.</description>
+<deviceset name="CR1220" prefix="P">
 <gates>
-<gate name="G$1" symbol="BC501SM_BATT_HOLD" x="0" y="0"/>
+<gate name="G$1" symbol="CR1220/1225" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="BC501SM_BATT_HOLD">
+<device name="" package="CR1220/1225">
 <connects>
 <connect gate="G$1" pin="GND" pad="GND"/>
-<connect gate="G$1" pin="VCC" pad="VCC"/>
+<connect gate="G$1" pin="VCC1" pad="VCC1"/>
+<connect gate="G$1" pin="VCC2" pad="VCC2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -3725,7 +3722,7 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="R2" library="resistor" deviceset="R-US_" device="R0603"/>
 <part name="PC1" library="freddyLibr" deviceset="PDV-P8101" device=""/>
 <part name="SW1" library="freddyLibr" deviceset="PCM12SMTR" device=""/>
-<part name="P1" library="freddyLibr" deviceset="BC501SM_BATT_HOLD" device=""/>
+<part name="P1" library="freddyLibr" deviceset="CR1220" device=""/>
 <part name="D1" library="freddyLibr" deviceset="XLAMP_XBD" device=""/>
 </parts>
 <sheets>
@@ -3737,7 +3734,7 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <instance part="R2" gate="G$1" x="43.18" y="35.56" rot="R90"/>
 <instance part="PC1" gate="G$1" x="15.24" y="53.34"/>
 <instance part="SW1" gate="G$1" x="5.08" y="86.36" rot="R90"/>
-<instance part="P1" gate="G$1" x="-7.62" y="66.04"/>
+<instance part="P1" gate="G$1" x="2.54" y="58.42" rot="R270"/>
 <instance part="D1" gate="G$1" x="43.18" y="53.34"/>
 </instances>
 <busses>
@@ -3745,8 +3742,8 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <nets>
 <net name="N$2" class="0">
 <segment>
-<wire x1="-20.32" y1="25.4" x2="-7.62" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="-7.62" y1="25.4" x2="15.24" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="-20.32" y1="25.4" x2="-10.16" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="-10.16" y1="25.4" x2="15.24" y2="25.4" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="45.72" x2="15.24" y2="25.4" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="25.4" x2="43.18" y2="25.4" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="1"/>
@@ -3755,8 +3752,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <pinref part="SW1" gate="G$1" pin="OUT2"/>
 <wire x1="-2.54" y1="88.9" x2="-20.32" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="-20.32" y1="88.9" x2="-20.32" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="-5.08" y1="58.42" x2="-10.16" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="-10.16" y1="58.42" x2="-10.16" y2="25.4" width="0.1524" layer="91"/>
 <pinref part="P1" gate="G$1" pin="GND"/>
-<wire x1="-7.62" y1="55.88" x2="-7.62" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -3770,9 +3768,11 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <net name="N$3" class="0">
 <segment>
 <pinref part="SW1" gate="G$1" pin="OUT1"/>
-<pinref part="P1" gate="G$1" pin="VCC"/>
 <wire x1="-2.54" y1="83.82" x2="-7.62" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="-7.62" y1="83.82" x2="-7.62" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="66.04" x2="2.54" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="76.2" x2="-7.62" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="-7.62" y1="76.2" x2="-7.62" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="P1" gate="G$1" pin="VCC1"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -3780,17 +3780,17 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <pinref part="PC1" gate="G$1" pin="1"/>
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="15.24" y1="71.12" x2="15.24" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="D1" gate="G$1" pin="AD"/>
 <wire x1="15.24" y1="66.04" x2="15.24" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="66.04" x2="43.18" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="66.04" x2="43.18" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="D1" gate="G$1" pin="AD"/>
 </segment>
 </net>
 <net name="N$5" class="0">
 <segment>
 <pinref part="R2" gate="G$1" pin="2"/>
-<pinref part="D1" gate="G$1" pin="CD"/>
 <wire x1="43.18" y1="40.64" x2="43.18" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="D1" gate="G$1" pin="CD"/>
 </segment>
 </net>
 </nets>
