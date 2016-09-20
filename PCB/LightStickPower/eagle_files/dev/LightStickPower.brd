@@ -145,8 +145,8 @@
 <wire x1="25" y1="15" x2="15.5" y2="15" width="0" layer="20"/>
 <wire x1="15.5" y1="15" x2="15.5" y2="17" width="0" layer="20"/>
 <wire x1="9.5" y1="17" x2="9.5" y2="15" width="0" layer="20"/>
-<text x="3.5" y="7" size="0.6096" layer="25">LightStickPower1.0
-8/14/16
+<text x="3.5" y="7" size="0.6096" layer="25">LightStickPower2.0
+9/20/16
 F. Lee</text>
 <wire x1="9.5" y1="17" x2="10.5" y2="17" width="0" layer="20"/>
 <wire x1="10.5" y1="17" x2="10.5" y2="18" width="0" layer="20"/>
