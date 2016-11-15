@@ -9,7 +9,7 @@ fi
 
 proj=$1
 
-eagledir="/c/Users/Freddy/Documents/eagle"
+eagledir="/c/Users/Frederick/Documents/eagle"
 
 mkdir -p $proj/eagle_files/dev &> /dev/null
 mkdir -p $proj/eagle_files/prod &> /dev/null
