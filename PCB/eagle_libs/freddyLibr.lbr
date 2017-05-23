@@ -267,12 +267,23 @@
 <wire x1="6.16" y1="6.16" x2="6.16" y2="-6.16" width="0.127" layer="21"/>
 <wire x1="6.16" y1="-6.16" x2="-6.16" y2="-6.16" width="0.127" layer="21"/>
 <wire x1="-6.16" y1="-6.16" x2="-6.16" y2="6.16" width="0.127" layer="21"/>
-<pad name="4" x="3.77" y="3.77" drill="1.1" diameter="1.27"/>
-<pad name="3" x="1.31" y="1.31" drill="1.1" diameter="1.27"/>
-<hole x="3.77" y="-1.31" drill="1"/>
-<hole x="-3.85" y="3.77" drill="1"/>
-<pad name="1" x="-3.77" y="-3.77" drill="1.1" diameter="1.27"/>
+<pad name="4" x="3.77" y="3.77" drill="1.2" diameter="1.27"/>
+<pad name="3" x="1.31" y="1.31" drill="1.2" diameter="1.27"/>
+<hole x="-1.31" y="3.77" drill="1"/>
+<hole x="3.77" y="-3.85" drill="1"/>
+<pad name="1" x="-3.77" y="-3.77" drill="1.2" diameter="1.27"/>
 <text x="0" y="6.35" size="1.27" layer="21">&gt;NAME</text>
+</package>
+<package name="SPW2430">
+<wire x1="-1.3" y1="1.6" x2="1.3" y2="1.6" width="0.05" layer="21"/>
+<wire x1="1.3" y1="1.6" x2="1.3" y2="-1.6" width="0.05" layer="21"/>
+<wire x1="1.3" y1="-1.6" x2="-1.3" y2="-1.6" width="0.05" layer="21"/>
+<wire x1="-1.3" y1="-1.6" x2="-1.3" y2="1.6" width="0.05" layer="21"/>
+<smd name="OUT" x="-0.74" y="1.16" dx="0.9" dy="0.66" layer="1"/>
+<smd name="VCC" x="0.74" y="1.16" dx="0.9" dy="0.66" layer="1"/>
+<smd name="GND2" x="0.74" y="-1.16" dx="0.9" dy="0.66" layer="1"/>
+<smd name="GND1" x="-0.74" y="-1.16" dx="0.9" dy="0.66" layer="1"/>
+<text x="0.13" y="1.7" size="0.254" layer="25">&gt;NAME</text>
 </package>
 </packages>
 <symbols>
@@ -455,6 +466,16 @@
 <pin name="COM" x="0" y="-10.16" length="middle" rot="R90"/>
 <pin name="OPT1" x="-10.16" y="0" length="middle"/>
 <pin name="OPT2" x="10.16" y="0" length="middle" rot="R180"/>
+</symbol>
+<symbol name="SPW2430">
+<wire x1="-5.08" y1="7.62" x2="5.08" y2="7.62" width="0.254" layer="94"/>
+<wire x1="5.08" y1="7.62" x2="5.08" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-7.62" x2="-5.08" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-7.62" x2="-5.08" y2="7.62" width="0.254" layer="94"/>
+<pin name="OUT" x="-2.54" y="12.7" length="middle" rot="R270"/>
+<pin name="GND1" x="-2.54" y="-12.7" length="middle" rot="R90"/>
+<pin name="GND2" x="2.54" y="-12.7" length="middle" rot="R90"/>
+<pin name="VCC" x="2.54" y="12.7" length="middle" rot="R270"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -770,6 +791,25 @@ Note the THM package has the ground pads on both sides of the PCB so that the ma
 <connect gate="G$1" pin="COM" pad="1"/>
 <connect gate="G$1" pin="OPT1" pad="3"/>
 <connect gate="G$1" pin="OPT2" pad="4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SPW2430" prefix="A" uservalue="yes">
+<description>Surface mount microphone outputting analog voltage.</description>
+<gates>
+<gate name="G$1" symbol="SPW2430" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SPW2430">
+<connects>
+<connect gate="G$1" pin="GND1" pad="GND1"/>
+<connect gate="G$1" pin="GND2" pad="GND2"/>
+<connect gate="G$1" pin="OUT" pad="OUT"/>
+<connect gate="G$1" pin="VCC" pad="VCC"/>
 </connects>
 <technologies>
 <technology name=""/>
